@@ -82,7 +82,7 @@ The metric definitions and pitfalls are based on the [DORA metrics guide] by DOR
 [Learning Hour]: https://sammancoaching.org/reference/learning_hour_definition.html
 [DORA]: https://dora.dev/
 [DORA metrics guide]: https://dora.dev/guides/dora-metrics/
-[Miro board]: https://miro.com/
+[Miro board]: https://miro.com/app/board/uXjVEYsoYBU=/
 [Facilitation Guide]: {% link how-to/facilitation-guide.md %}
 [DORA Metrics]: {% link explanation/dora-metrics.md %}
 [Open Question]: https://sammancoaching.org/activities/connect.html

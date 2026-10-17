@@ -66,5 +66,5 @@ How to prepare and run the Software Delivery Performance Learning Hour remotely 
 1. Ask Participants to add sticky notes to the Feedback frame on the board.
 2. Export the board or take screenshots of the Metric Cards before clearing it for the next session.
 
-[Miro board]: https://miro.com/
+[Miro board]: https://miro.com/app/board/uXjVEYsoYBU=/
 [DORA Metrics]: {% link explanation/dora-metrics.md %}
