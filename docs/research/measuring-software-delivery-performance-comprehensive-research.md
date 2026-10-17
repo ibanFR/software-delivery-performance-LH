@@ -302,7 +302,7 @@ Independence note: B1, D1-D7 and G1-G3 are all products of the same research pro
 
 ## Recommended outline for the explanation page
 
-Proposed file: `docs/explanation/measuring-software-delivery-performance.md`
+Proposed file: `site/explanation/measuring-software-delivery-performance.md`
 
 ```
 ---

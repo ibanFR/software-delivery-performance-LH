@@ -10,7 +10,7 @@ on:
   push:
     branches: ["main"]
     paths:
-      - "docs/**"
+      - "site/**"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -32,17 +32,17 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: docs
+        working-directory: site
     steps:
       - name: Checkout
         uses: actions/checkout@v7
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          # Ruby version is read from docs/.ruby-version (see working-directory below)
+          # Ruby version is read from site/.ruby-version (see working-directory below)
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
-          working-directory: '${{ github.workspace }}/docs'
+          working-directory: '${{ github.workspace }}/site'
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
@@ -55,7 +55,7 @@ jobs:
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v5
         with:
-          path: docs/_site/
+          path: site/_site/
 
   # Deployment job
   deploy:

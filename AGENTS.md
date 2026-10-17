@@ -1,7 +1,7 @@
 # AGENTS.md
 
 This repository is a Samman Learning Hour on DORA software delivery performance metrics, published as a Just the Docs
-site from `docs/`. It holds documentation only; there is no application code.
+site from `site/`. It holds documentation only; there is no application code.
 
 ## Language
 
@@ -12,10 +12,13 @@ term there when a new one is settled.
 
 Pages follow the Diátaxis split, one Just the Docs parent page per section:
 
-- `docs/index.md`: the Learning Hour itself (learning goals plus the Connect, Concept, Concrete Practice, Conclusions
+- `site/index.md`: the Learning Hour itself (learning goals plus the Connect, Concept, Concrete Practice, Conclusions
   phases with timings). Keep its timings and prompts in sync with the Facilitation Guide.
-- `docs/how-to/`: the Facilitation Guide, written as numbered steps for the Facilitator.
-- `docs/explanation/`: background reading for Participants.
+- `site/how-to/`: the Facilitation Guide, written as numbered steps for the Facilitator.
+- `site/explanation/`: background reading for Participants.
+
+`docs/research/` sits outside the site and is not published. It holds research notes that back the pages, and
+`trusted-source-domains.yaml`, the source list research runs draw on.
 
 ## Page conventions
 
@@ -27,5 +30,5 @@ Pages follow the Diátaxis split, one Just the Docs parent page per section:
 
 ## Workflow
 
-- Preview locally with `./docs/start_local_server.sh`.
+- Preview locally with `./site/start_local_server.sh`.
 - Commit messages use conventional commits (`docs:`, `feat:`, `chore:`).
