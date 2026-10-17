@@ -7,8 +7,8 @@ This repository contains documentation and code from multiple sources, each unde
 ------------------------
 - Copyright (c) 2022 just-the-docs
 - License: MIT
-- Location: docs/ directory source files
-- License file: docs/LICENSE
+- Location: site/ directory source files
+- License file: site/LICENSE
 
 2. DORA Metrics
 ---------------
@@ -24,7 +24,7 @@ This repository contains documentation and code from multiple sources, each unde
 ---------------------
 - Copyright (c) 2026 Iván Fernández
 - License: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
-- Location: docs/ directory and any site documentation files
+- Location: site/ directory and any site documentation files
 - License file: LICENSE-CC-BY-SA-4.0
 
 5. Additional Notes

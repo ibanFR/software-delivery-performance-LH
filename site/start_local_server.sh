@@ -4,7 +4,7 @@
 # Preview at http://localhost:4000
 #
 # Requires Ruby and Bundler. From the repository root or anywhere, run:
-#   ./docs/start_local_server.sh
+#   ./site/start_local_server.sh
 
 set -euo pipefail
 
