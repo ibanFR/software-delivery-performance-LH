@@ -1,106 +1,83 @@
 # Trusted Source Domains for Evidence-Driven Research
-# Used by knowledge-researcher agent to validate source credibility
+# Scope: DORA software delivery performance research (Accelerate, State of DevOps reports, DORA metrics)
+# Used by the researcher agent to validate source credibility.
 
-# High-reputation academic and research sources
+# Primary publishers of the DORA research programme
+primary_research:
+  description: "DORA programme: Accelerate book, State of DevOps / DORA reports, dora.dev guides"
+  domains:
+    - "dora.dev"
+    - "cloud.google.com/devops"
+    - "cloud.google.com/blog/products/devops-sre"
+    - "cloud.google.com/blog/products/ai-machine-learning"  # 2025 DORA report announcement
+    - "services.google.com/fh/files/misc"  # hosts the DORA report PDFs
+    - "itrevolution.com"
+    - "puppet.com/resources/state-of-devops-report"  # 2014-2017 reports, pre-Google era
+  local_files:
+    - "harness/accelerate-the-science-of-devops.epub"  # Forsgren, Humble, Kim (2018); cite by chapter
+    - "harness/2024-dora-accelerate-state-of-devops-report.pdf"  # 2024 DORA report, from https://dora.dev/research/2024/ (PDF link dora.dev/research/2024/dora-report/2024-dora-accelerate-state-of-devops-report.pdf); same SHA-1 (ecec8c87) as services.google.com/fh/files/misc/2024_final_dora_report.pdf; cite by page
+    - "harness/2025_state_of_ai_assisted_software_development.pdf"  # 2025 DORA report, from https://dora.dev/research/2025/ (download link hosted on Google Drive), SHA-1 e3205601; cite by page
+  reputation: high
+  verification_requirements:
+    - same_programme_not_independent  # book, reports, dora.dev and Google Cloud count as ONE source for cross-referencing
+    - cite_report_year_and_edition    # definitions changed across years (MTTR -> Failed Deployment Recovery Time, rework rate added 2024)
+
+# Peer-reviewed and academic work, including independent replications and critiques
 academic:
-  description: "Peer-reviewed academic and research institutions"
+  description: "Peer-reviewed venues and academic repositories"
   domains:
     - "*.edu"
     - "*.ac.uk"
-    - "scholar.google.com"
-    - "arxiv.org"
-    - "pubmed.ncbi.nlm.nih.gov"
-    - "researchgate.net"
-    - "ieee.org"
     - "acm.org"
+    - "queue.acm.org"
+    - "ieee.org"
+    - "computer.org"
+    - "arxiv.org"
     - "springer.com"
     - "sciencedirect.com"
-    - "jstor.org"
-    - "nature.com"
-    - "science.org"
+    - "researchgate.net"
+    - "scholar.google.com"
   reputation: high
   verification_requirements:
     - peer_review_preferred
-    - citation_tracking
     - author_credentials
+    - note_if_authors_are_dora_researchers  # Forsgren, Humble, Kim, Smith, et al. are not independent of DORA
 
-# Official standards bodies and government sources
-official:
-  description: "Government, standards organizations, and official documentation"
+# Practitioners who shaped continuous delivery and DevOps thinking
+practitioner_experts:
+  description: "Recognized authors on continuous delivery, lean and DevOps"
   domains:
-    - "*.gov"
-    - "*.gov.uk"
-    - "w3.org"
-    - "ietf.org"
-    - "iso.org"
-    - "nist.gov"
-    - "docs.microsoft.com"
-    - "docs.oracle.com"
-    - "docs.python.org"
-    - "docs.oracle.com/javase"
-    - "kubernetes.io/docs"
-    - "docker.com/docs"
-  reputation: high
-  verification_requirements:
-    - official_publication
-    - version_tracking
-    - standards_compliance
-
-# Industry leaders and recognized experts
-industry_leaders:
-  description: "Established technology companies and recognized industry experts"
-  domains:
-    - "github.com"
-    - "stackoverflow.com"
     - "martinfowler.com"
-    - "refactoring.guru"
-    - "enterpriseintegrationpatterns.com"
-    - "microservices.io"
-    - "12factor.net"
-    - "reactivemanifesto.org"
-    - "agilemanifesto.org"
+    - "continuousdelivery.com"  # Jez Humble
     - "thoughtworks.com/insights"
+    - "thoughtworks.com/radar"
     - "infoq.com"
+    - "itrevolution.com/articles"
   reputation: medium-high
   verification_requirements:
     - cross_reference_required
     - author_expertise_validation
-    - community_consensus
 
-# Technical documentation and established platforms
-technical_documentation:
-  description: "Official technical documentation and established platforms"
+# Engineering metrics vendors: useful for pitfalls and field experience, but commercial interest
+vendor:
+  description: "Engineering-intelligence and developer-experience vendors"
   domains:
-    - "developer.mozilla.org"
-    - "developers.google.com"
-    - "aws.amazon.com/documentation"
-    - "cloud.google.com/docs"
-    - "learn.microsoft.com"
-    - "devdocs.io"
-    - "readthedocs.org"
-  reputation: high
+    - "getdx.com"
+    - "linearb.io"
+    - "swarmia.com"
+    - "sleuth.io"
+    - "jellyfish.co"
+    - "atlassian.com"
+    - "github.blog"
+  reputation: medium
   verification_requirements:
-    - version_accuracy
-    - official_source_confirmation
+    - flag_commercial_interest
+    - never_sole_source_for_a_claim
+    - minimum_3_source_cross_reference
 
-# Open source foundations and communities
-open_source:
-  description: "Recognized open source foundations and communities"
-  domains:
-    - "apache.org"
-    - "eclipse.org"
-    - "cncf.io"
-    - "opensource.org"
-    - "fsf.org"
-    - "linuxfoundation.org"
-  reputation: high
-  verification_requirements:
-    - community_validation
-    - project_maturity_check
-
-# Medium-trust sources requiring additional verification
+# General community writing
 medium_trust:
-  description: "Quality sources requiring cross-referencing"
+  description: "Community blogs requiring cross-referencing"
   domains:
     - "medium.com"
     - "dev.to"
@@ -111,7 +88,7 @@ medium_trust:
     - minimum_3_source_cross_reference
     - fact_checking_mandatory
 
-# Excluded sources - unreliable or promotional
+# Excluded sources
 excluded:
   description: "Sources excluded due to low quality control or bias"
   domains:
@@ -120,13 +97,16 @@ excluded:
     - "tumblr.com"
     - "pastebin.com"
     - "quora.com"
-  reason: "Unverified sources, potential bias, low quality control, no editorial oversight"
+    - "reddit.com"
+    - "linkedin.com/pulse"
+  reason: "Unverified, no editorial oversight, or engagement-driven content"
   action: "Reject and log warning"
 
 # Source validation rules
 validation_rules:
   minimum_sources_per_claim: 3
   cross_reference_required: true
+  independence_rule: "Sources from primary_research count as one source; a claim needs at least one source outside the DORA programme to reach high confidence"
 
   reputation_scoring:
     high: 1.0
@@ -155,20 +135,17 @@ validation_rules:
 # Research quality guidelines
 quality_guidelines:
   evidence_standards:
-    - "Direct quotes or data from reputable sources"
-    - "Proper attribution and citation"
-    - "Version information for technical documentation"
-    - "Publication date or last update date"
-    - "Author credentials when available"
+    - "Quote metric definitions verbatim from https://dora.dev/guides/dora-metrics/ and credit DORA"
+    - "Give report year for every statistic or cluster figure"
+    - "Distinguish correlation findings from causal claims"
+    - "Use GLOSSARY.md terms verbatim"
 
   bias_detection:
-    - "Check for commercial interests or sponsorship"
-    - "Identify potential conflicts of interest"
-    - "Verify with independent sources"
-    - "Note any disclaimers or limitations"
+    - "DORA research is sponsored by Google Cloud (and earlier Puppet); note sponsorship"
+    - "Survey-based, self-reported data; note sampling and self-selection limits"
+    - "Vendor content promotes measurement tooling; flag commercial interest"
 
   conflicting_information:
     - "Document all conflicting sources"
-    - "Evaluate source reliability for each claim"
+    - "Note when a conflict comes from definition changes across report years"
     - "Present both sides with evidence"
-    - "Note which sources are more authoritative"

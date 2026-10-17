@@ -39,19 +39,19 @@ How well a team delivers changes to an application or service, as measured by DO
 _Avoid_: DevOps performance, velocity, productivity
 
 **Throughput**:
-The group of metrics describing how fast changes move through the delivery process: Change Lead Time, Deployment Frequency, Failed Deployment Recovery Time.
+A measure of how many changes can move through the system over a period of time: Change Lead Time, Deployment Frequency, Failed Deployment Recovery Time.
 _Avoid_: Speed, velocity
 
 **Instability**:
-The group of metrics describing how often deployments go wrong: Change Fail Rate, Deployment Rework Rate.
+A measure of how well the software deployments go: Change Fail Rate, Deployment Rework Rate.
 _Avoid_: Stability, quality
 
 **Change Lead Time**:
-The time a change takes to go from committed to version control to deployed in production.
+The amount of time it takes for a change to go from committed to version control to deployed in production.
 _Avoid_: Lead time for changes, cycle time
 
 **Deployment Frequency**:
-The number of deployments over a given period, or the time between deployments.
+The number of deployments over a given period or the time between deployments.
 _Avoid_: Release frequency, release cadence
 
 **Failed Deployment Recovery Time**:
@@ -59,9 +59,9 @@ The time it takes to recover from a deployment that fails and requires immediate
 _Avoid_: MTTR, mean time to restore, time to restore service
 
 **Change Fail Rate**:
-The ratio of deployments that require immediate intervention following deployment.
+The ratio of deployments that require immediate intervention following a deployment.
 _Avoid_: Change failure rate, failure rate
 
 **Deployment Rework Rate**:
-The ratio of deployments that are unplanned and happen as a result of an incident in production.
+The ratio of deployments that are unplanned but happen as a result of an incident in production.
 _Avoid_: Rework rate, hotfix rate

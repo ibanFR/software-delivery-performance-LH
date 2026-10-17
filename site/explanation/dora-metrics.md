@@ -25,7 +25,7 @@ software delivery and operations performance. Its research found that five metri
 a team delivers changes to an application or service.
 
 The metrics are leading indicators of organizational performance and employee well-being, and lagging indicators of
-delivery practices. Improving the practices moves the metrics, not the other way around.
+delivery practices. The links come from DORA's survey research and show correlation, not cause.
 
 ## Background
 
@@ -35,7 +35,8 @@ deployments.
 
 ## How It Works
 
-The five metrics fall into two groups.
+The five metrics fall into two groups. The definitions below paraphrase DORA;
+[Measuring Software Delivery Performance] quotes DORA's exact wording.
 
 ### Throughput
 
@@ -57,9 +58,10 @@ How often deployments go wrong.
 
 ### Read them together
 
-Top performers do well across all five metrics, and low performers do poorly. Speed and stability are not a
-trade-off: teams that deploy small changes often also tend to fail less and recover faster. Looking at one group alone
-hides the cost of optimizing it, such as deploying faster by skipping checks.
+DORA's research reports that Throughput and Instability tend to move together rather than trade off: teams that
+deploy often also tend to fail less. This is a correlation from DORA's own surveys, with dated exceptions, and it has
+not been replicated outside DORA. [Measuring Software Delivery Performance] covers the evidence. Looking at one group
+alone hides the cost of optimizing it, such as deploying faster by skipping checks.
 
 ## Pitfalls
 
@@ -76,11 +78,13 @@ DORA warns against these common mistakes:
 
 ## Further Reading
 
+- [Measuring Software Delivery Performance]
 - [DORA's software delivery performance metrics]
 - [DORA Quick Check]
 - [DORA capabilities catalog]
 
 [DORA]: https://dora.dev/
+[Measuring Software Delivery Performance]: {% link explanation/measuring-software-delivery-performance.md %}
 [DORA's software delivery performance metrics]: https://dora.dev/guides/dora-metrics/
 [DORA Quick Check]: https://dora.dev/quickcheck/
 [DORA capabilities catalog]: https://dora.dev/capabilities/
