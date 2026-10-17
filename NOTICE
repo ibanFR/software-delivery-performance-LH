@@ -1,0 +1,35 @@
+NOTICE
+======
+
+This repository contains documentation and code from multiple sources, each under the MIT License or Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License. Please see below for attribution and licensing details.
+
+1. Just the Docs (Theme)
+------------------------
+- Copyright (c) 2022 just-the-docs
+- License: MIT
+- Location: docs/ directory source files
+- License file: docs/LICENSE
+
+2. DORA Metrics
+---------------
+- Source: DORA, "DORA's software delivery performance metrics", https://dora.dev/guides/dora-metrics/
+- Usage: Metric definitions and pitfalls are summarized and quoted with attribution in the site documentation
+
+3. Samman Learning Hour Format
+------------------------------
+- Source: Samman Technical Coaching, https://sammancoaching.org/
+- Usage: The Learning Hour structure and activity names follow the Samman Coaching website
+
+4. Site Documentation
+---------------------
+- Copyright (c) 2026 Iván Fernández
+- License: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+- Location: docs/ directory and any site documentation files
+- License file: LICENSE-CC-BY-SA-4.0
+
+5. Additional Notes
+-------------------
+- All original copyright and license notices have been preserved.
+- If you use or redistribute this repository, please retain this NOTICE file and the original license files.
+
+For more information, see the README.md and the respective license files.
