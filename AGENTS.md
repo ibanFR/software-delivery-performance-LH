@@ -17,8 +17,8 @@ Pages follow the Diátaxis split, one Just the Docs parent page per section:
 - `site/how-to/`: the Facilitation Guide, written as numbered steps for the Facilitator.
 - `site/explanation/`: background reading for Participants.
 
-`docs/research/` sits outside the site and is not published. It holds research notes that back the pages, and
-`trusted-source-domains.yaml`, the source list research runs draw on.
+`docs/research/` sits outside the site and is not published. It holds research notes that back the pages. Research
+runs draw on the source list in `.nwave/trusted-source-domains.yaml`.
 
 ## Page conventions
 

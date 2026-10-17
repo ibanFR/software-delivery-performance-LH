@@ -8,7 +8,8 @@ community of practice. The Learning Hour is published as a [Just the Docs] site 
 - `site/index.md`: the Learning Hour description, with learning goals and the four phases
 - `site/how-to/facilitation-guide.md`: how to prepare and run the session
 - `site/explanation/dora-metrics.md`: background reading on the metrics and their pitfalls
-- `docs/research/`: research notes behind the site pages, plus the trusted source domains they draw on (not published)
+- `docs/research/`: research notes behind the site pages (not published)
+- `.nwave/trusted-source-domains.yaml`: the trusted source domains research runs draw on
 - `GLOSSARY.md`: the language used across this repository
 - `.github/workflows/pages.yml`: builds and deploys the site to GitHub Pages when `site/**` changes on `main`
 
