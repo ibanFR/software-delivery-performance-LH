@@ -47,7 +47,7 @@ Measuring well helps a team in four ways.
 
 **Shared language and ownership.** The book describes a good measure as one that "focuses on global, system-level goals, and measures outcomes that different functions must collaborate in order to improve" (*Accelerate*, chapter 2). DORA says sharing the metrics "fosters collaboration and shared ownership of the delivery process" ([DORA's software delivery performance metrics]).
 
-**Organizational outcomes.** In data from 2014 to 2017, *Accelerate* reports that high performers were "twice as likely" as low performers to exceed their goals for profitability, market share and productivity (chapter 2). DORA's 2022 research adds that the link depends on operational reliability ([DORA 2022 research]).
+**Organizational outcomes.** Software Delivery Performance predicts organizational performance. In *Accelerate* (chapter 2), high performers were twice as likely as low performers to exceed their goals for profitability, market share and productivity. The same held for noncommercial goals such as customer satisfaction, quality and achieving the organization's mission. The data comes from 2014 to 2017. DORA's 2022 research adds that the link depends on operational reliability ([DORA 2022 research]).
 
 > **DORA finding, weak independent corroboration.** This link comes from DORA's own survey data, and organizational performance was self-rated. The sources reviewed for this page did not include an independent study that reproduces it. The findings describe prediction and association, not cause.
 
