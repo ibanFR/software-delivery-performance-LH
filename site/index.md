@@ -51,7 +51,7 @@ A short [Lecture] over the Concept frames on the board:
 5. **Pitfalls**: metrics as goals, relying on one metric, the industry as a shield, disparate comparisons, siloed
    ownership, competing, and measurement over improvement.
 
-See [DORA Metrics] for the full explanation.
+See [DORA Metrics] for the definitions and [Measuring Software Delivery Performance] for the full explanation.
 
 ## Concrete Practice: Describe one metric (⏱️ 30 min)
 
@@ -84,7 +84,8 @@ The metric definitions and pitfalls are based on the [DORA metrics guide] by DOR
 [DORA metrics guide]: https://dora.dev/guides/dora-metrics/
 [Miro board]: https://miro.com/app/board/uXjVEYsoYBU=/
 [Facilitation Guide]: {% link how-to/facilitation-guide.md %}
-[DORA Metrics]: {% link explanation/dora-metrics.md %}
+[DORA Metrics]: {% link reference/dora-metrics.md %}
+[Measuring Software Delivery Performance]: {% link explanation/measuring-software-delivery-performance.md %}
 [Open Question]: https://sammancoaching.org/activities/connect.html
 [Lecture]: https://sammancoaching.org/activities/concept.html
 [Work In Pairs]: https://sammancoaching.org/activities/concrete.html

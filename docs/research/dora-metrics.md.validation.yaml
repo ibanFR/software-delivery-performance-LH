@@ -1,0 +1,197 @@
+validation_report:
+  document: site/reference/dora-metrics.md
+  companion_file: site/reference/reference.md (section parent; front matter and lead only)
+  version: "cycle 1 revision (2026-10-18). H2 sections: Scope; Summary; Throughput (H3 Change Lead Time, Deployment Frequency, Failed Deployment Recovery Time); Instability (H3 Change Fail Rate, Deployment Rework Rate); Changes over time; Further reading"
+  evidence_source: "docs/research/dora-metrics-for-reference-doc.md (APPROVED after Review 2, 2026-10-18)"
+  method_note: "The author had no shell tool. Word count, Flesch, spelling and link resolution were NOT machine-checked by the author. Orchestrator counts are recorded below as the 'before' measurement. The post-revision counts must be re-measured by a script run."
+
+  measurements:
+    before_cycle_1_revision:
+      measured_by: "orchestrator (cycle 1 review)"
+      words: 1350
+      sentences: 94
+      flesch_reading_ease: 46.5
+    after_cycle_1_revision:
+      status: "Measured by orchestrator (Python) after cycle 1 revision: 1,291 words, 95 sentences, Flesch 47.4."
+    flesch_gate: "70-80. NOT met (46.5 before revision)."
+
+  doc_type:
+    declared: reference
+    purity_estimate: "~90% reference. Content is definitions, units, survey items with years, a summary table and a changes table. Gap notes ('DORA does not specify...') are one line each and factual. No explanation essay, no steps, no tutorial content."
+    jtbd_check: "Participant looks up a definition, unit or survey item while filling a Metric Card. Facilitator checks a definition at a Readout. The page is structured per metric in the same field order for ctrl-F lookup. Single JTBD (look up a specific answer). No blended JTBD."
+
+  structure_check:
+    per_metric_field_order: "Definition (DORA blockquote, credited) -> Group -> Measures -> Unit -> Survey question (2024, with 2025 note, and 2022/2023 format notes where they differ) -> Former names. All five metrics now share the same five bullet fields."
+    survey_history_judgement: "Judgement, not a DORA statement. The Change Fail Rate 2022 ranges and 2023 number switch were folded into its Survey question bullet, so the field set matches the other four. Failed Deployment Recovery Time's 2022 survey wording ('a service incident or a defect that impacts users') is also in its Survey question bullet, for the same reason. Source: research Section 3 and Section 4 survey rows (S41, S42)."
+    group_order: "Throughput (Change Lead Time, Deployment Frequency, Failed Deployment Recovery Time) then Instability (Change Fail Rate, Deployment Rework Rate). Matches the brief."
+
+  word_count:
+    before: 1350
+    after: 1291
+    status: "No target set in brief. Re-measure."
+
+  flesch_reading_ease:
+    before: 46.5
+    after: 47.4
+    status: "Flesch 70-80 gate NOT met. Deviation: quoted DORA definitions and survey wording are kept verbatim per the brief, and fixed glossary terms are kept verbatim. Plainer non-quoted prose was applied in the Measures bullets (cycle 1, M7). Accepted deviation, flagged for user."
+
+  spelling:
+    checked: "manual read only"
+    status: "No errors found on manual read. Not machine-checked. Gate 'zero spelling errors' not confirmed by a script."
+
+  glossary_compliance:
+    terms_used_verbatim: [Software Delivery Performance, Throughput, Instability, Change Lead Time, Deployment Frequency, Failed Deployment Recovery Time, Change Fail Rate, Deployment Rework Rate]
+    removed_from_terms_list: "Participants and Metric Card. The page does not use them in its body. Their use is in the Metric Card context of the jtbd_check only."
+    avoid_terms_check:
+      - "lead time for changes: appears in Change Lead Time 'Former names' bullet (the survey wording 2022 to 2025) and in the 2014 to 2015 row of Changes over time. Treated as a former name. Judgement call: a glossary Avoid name used only in the former-name/history context the brief permits."
+      - "delivery lead time, deployment lead time: appear only under Former names and in the 2018 Changes row."
+      - "release frequency: appears only under Former names (Deployment Frequency)."
+      - "MTTR, mean time to recover, time to restore service: appear only under Former names (Failed Deployment Recovery Time) and in the Changes table, as historical names."
+      - "change failure rate: now appears in Change Fail Rate 'Former names' bullet, in quotes, as a DORA report variant (2024 report pp. 6, 11-14; 2025 report pp. 21, 139). Added in cycle 1 at coordinator request (M2). Deliberate. It is listed as a report name, not used as the page's term."
+      - "change fail percentage: appears in Change Fail Rate 'Former names' bullet as a DORA 2024 report variant (p. 6). Listed, not used as the term."
+      - "rework rate: appears in Deployment Rework Rate 'Former names' bullet, in quotes, as a DORA report variant (2024 report p. 11; 2025 report p. 13). Added in cycle 1 at coordinator request (M2). Deliberate."
+      - "hotfix rate: absent. 'hotfix' appears only inside DORA's verbatim Change Fail Rate definition."
+      - "software delivery stability: appears as the 2024 report's name for the second group (Instability section and 2024 Changes row). Former name, labelled as 2024."
+      - "stability as a group name: used only in 'moved from stability to Throughput' (Failed Deployment Recovery Time group line; 2024 row) and 'The 2015 model grouped it under stability'. Historical."
+      - "cycle time, velocity, speed, quality, attendee, student, learner, release cadence: absent."
+    compliance_estimate: "All current-name usages match GLOSSARY.md capitalisation. Avoid names appear only as former names, survey wording, or quoted DORA report variants. Estimate 100% of current-name usages."
+
+  dora_attribution:
+    definitions_quoted: "All five definitions quoted verbatim from dora.dev (research [S1]; also verbatim, local, in the 2025 report p. 13, per research). Each blockquote is credited to DORA with a link."
+    group_definitions_quoted: "Throughput and Instability definitions quoted with DORA credit."
+    survey_items: "Quoted from the DORA 2024 questionnaire, with the 2025 note. Credited by link."
+    report_claims: "Page references: 2024 report p. 10 (change measured; failure rule, footnote 1, text on p. 16), p. 11 (rework item as 'how many deployments'), pp. 11-13 (group names and regrouping), p. 13 (2025 Instability name, cited as 2025 report p. 13). Report variant pages: 'change failure rate' 2024 pp. 6, 11-14 and 2025 pp. 21, 139; 'rework rate' 2024 p. 11 and 2025 p. 13 (research terminology table)."
+    scope: "Scope is paraphrased, not quoted: 'DORA says the metrics are best suited to measuring one application or service at a time'. The research marked the dora.dev scope quote as 'not verified locally', so the page does not quote it."
+
+  sourcing_caveats:
+    - "The 2014 to 2015 model, the 2015 grouping (throughput and stability), the 2018 to 2021 availability row, and the 2023 rename and scope limit rest on a fetch-tool summary of dora.dev history (research S2), not on verbatim text. Quotes from the history page are not used on the page."
+    - "The 2023 survey format and wording (S41) were partly summarised by the fetch tool in the research. The change-caused scope claim relies on S2 and on the 2022 to 2023 wording change in S42 and S41."
+
+  section_content:
+    - "Scope: one application or service (paraphrase); pointer to Measuring Software Delivery Performance for why. No argument."
+    - "Summary table: metric, group, short definition (paraphrase, labelled as such), unit."
+    - "Throughput and Instability group blocks: verbatim group definitions, credited."
+    - "Five metric blocks: definition, group, measures, unit, 2024 survey item, former names (with report variants where DORA uses them). DORA gaps stated in one line each: aggregation (Change Lead Time, Failed Deployment Recovery Time), counting deployments in automated systems (Deployment Frequency), clock start (Failed Deployment Recovery Time), unplanned-deployment rule (Deployment Rework Rate)."
+    - "Changes over time: short summary table, 2014 to 2025. Each row is a short fact. Detail sits in the metric blocks. Accepted duplication: the 2023 Failed Deployment Recovery Time change and the 2024 regrouping appear in both the table and the metric blocks. The table is a dated summary, and the metric blocks give the per-metric detail."
+    - "Further reading: five items as '- [Label][]: text'."
+
+  collapse_detection:
+    clean: true
+    checks:
+      tutorial_creep: "None. No 'you should' or 'first' instructions."
+      how_to_creep: "None. No numbered steps, no 'do this'. 'Measures' bullets describe what counts; they do not say how to measure."
+      reference_narrative: "Minimal. Prose is limited to one-line scope, one-line Group/Measures notes, and factual gap notes. No opinions. Measures bullets were rewritten as plain statements in cycle 1 (M7)."
+      explanation_task_drift: "None. No 'why' essays. The page points to Measuring Software Delivery Performance for reasons."
+      hybrid_horror: "None. One type only."
+      duplication_check: "Group definitions appear once each (in their H2). Per-metric definitions appear once each. Changes over time duplicates some per-metric facts, accepted as a dated summary (see section_content)."
+
+  links:
+    internal:
+      - "[Measuring Software Delivery Performance]: {% link explanation/measuring-software-delivery-performance.md %} (exists; resolves)"
+    external:
+      - "DORA's software delivery performance metrics -> https://dora.dev/guides/dora-metrics/"
+      - "DORA history -> https://dora.dev/guides/dora-metrics/history/"
+      - "DORA 2022 questions -> https://dora.dev/research/2022/questions/"
+      - "DORA 2023 questions -> https://dora.dev/research/2023/questions/"
+      - "DORA 2024 questions -> https://dora.dev/research/2024/questions/"
+      - "DORA 2025 questions -> https://dora.dev/research/2025/questions/"
+      - "DORA 2024 report -> https://dora.dev/research/2024/dora-report/"
+      - "DORA 2025 report -> https://dora.dev/research/2025/dora-report/"
+      - "Accelerate -> https://itrevolution.com/product/accelerate/"
+    integrity:
+      defined_labels: 10 (1 internal, 9 external), all used on the page by hand count
+      undefined_references: 0 (by hand)
+      unused_definitions: 0 (by hand)
+      further_reading_items: "5 ('[Label][]: text' form)"
+      note: "External URLs were not fetched in this step. Dora.dev URLs are taken from the approved research file's source list."
+
+  cross_page_links:
+    status: "RESOLVED (cycle 1). Coordinator updated inbound links. Grep on 2026-10-18 confirms: site/index.md:87, site/how-to/facilitation-guide.md:70 and site/explanation/measuring-software-delivery-performance.md:167 all use {% link reference/dora-metrics.md %}. site/explanation/dora-metrics.md is deleted by the coordinator."
+
+  footnote_citation:
+    status: "RESOLVED (cycle 1). Cited as 'p. 10, footnote 1; the footnote text is on p. 16'. Coordinator verified the footnote in the extracted 2024 text."
+
+  deviations:
+    - "Flesch 70-80 NOT met (46.5 before revision). Accepted deviation: verbatim DORA definitions, survey items and fixed glossary terms. Flagged for user."
+    - "Flesch 47.4 after revision, below the 70-80 target: deviation for verbatim quotes and fixed glossary terms, pending user acceptance."
+    - "Spelling and link resolution checked by hand only."
+    - "site/reference/reference.md has no TOC block, mirroring site/explanation/explanation.md as the brief asked. AGENTS.md says each page carries a TOC; the parent page is the exception the brief set. Not changed (review item L4, skipped as project-level)."
+    - "Scope is a paraphrase, not a quote, because the dora.dev scope sentence was not verified locally."
+    - "Change Fail Rate and Failed Deployment Recovery Time survey-format notes are folded into the Survey question bullet (judgement; see structure_check)."
+
+  open_caveats:
+    - "Word count, Flesch and spelling not machine-verified after cycle 1."
+    - "Changes-table duplication with the metric blocks: accepted as a dated summary."
+    - "2014 to 2015 model, 2015 grouping, 2018 to 2021 availability row and 2023 rename and scope limit rest on a fetch-tool summary of dora.dev history (research S2). Partly summarised S41 for 2023. Not quoted verbatim on the page."
+    - "Survey-format judgements (Change Fail Rate ranges to number; Failed Deployment Recovery Time 2022 wording) are the author's judgement from the research, not a DORA statement."
+    - "'change failure rate' and 'rework rate' appear on the page as quoted DORA report variants (deliberate, per coordinator M2). A strict reader of the glossary may object."
+
+  verdict_recommendation: "APPROVED after cycle 2. Flesch deviation pending user acceptance."
+
+documentation_assessment_review_cycle_1:
+  reviewer: "orchestrator (cycle 1)"
+  verdict: NEEDS_REVISION
+  issue_summary: {high: 0, medium: 7, low: 5}
+  issues:
+    - id: M1
+      severity: medium
+      issue: "Scope sentence contained an unverified claim beyond the dora.dev paraphrase."
+      resolution: "Fixed. Scope now reads: 'DORA says the metrics are best suited to measuring one application or service at a time.' Dora.dev is the cited source. No quote."
+    - id: M2
+      severity: medium
+      issue: "Former names: None was incomplete for Change Fail Rate and Deployment Rework Rate; the report variants were not shown."
+      resolution: "Fixed. Change Fail Rate lists 'change failure rate' (2024 report pp. 6, 11-14; 2025 report pp. 21, 139) and 'change fail percentage' (2024 report p. 6) in quotes. Deployment Rework Rate lists 'rework rate' (2024 report p. 11; 2025 report p. 13). 'The name has not changed since Accelerate' removed. Deliberate use of glossary Avoid terms as quoted report variants, noted in avoid_terms_check."
+    - id: M3
+      severity: medium
+      issue: "Summary line said 'same survey items' across metrics, which overstated the match."
+      resolution: "Fixed. Changes table 2025 row and per-metric notes now say the wording is the same or differs slightly, metric by metric."
+    - id: M4
+      severity: medium
+      issue: "Change Fail Rate had an extra 'Survey history' bullet, so the field set differed from the other metrics. FDRT 2022 survey wording difference missing."
+      resolution: "Fixed. Change Fail Rate's survey-history sentences are folded into its Survey question bullet. FDRT Survey question bullet now includes the 2022 wording ('a service incident or a defect that impacts users', DORA 2022 questions). All five metrics share the same five bullet fields."
+    - id: M5
+      severity: medium
+      issue: "Measured counts not recorded; Flesch gate not met."
+      resolution: "Recorded in yaml: before-revision 1,350 words, 94 sentences, Flesch 46.5. After-revision counts marked NOT measured and to be re-measured. Flesch gate deviation recorded for user acceptance."
+    - id: M6
+      severity: medium
+      issue: "Footnote citation and cross-page links to the old page were not recorded as resolved."
+      resolution: "Recorded as resolved in yaml. Footnote: 'p. 10, footnote 1; the footnote text is on p. 16' (coordinator verified in extracted 2024 text). Links: grep confirms index.md:87, facilitation-guide.md:70 and measuring page:167 point to reference/dora-metrics.md; old page deleted by coordinator."
+    - id: M7
+      severity: medium
+      issue: "Some Measures bullets read as dense, quote-heavy prose (lines 77, 97, 110)."
+      resolution: "Fixed. Failed Deployment Recovery Time, Change Fail Rate and Deployment Rework Rate Measures bullets rewritten as plain statements, e.g. 'Only a failure that reaches end users after production counts. A change stopped before production is not a failure.' Verbatim DORA quotes kept in the definition blocks and survey items."
+    - id: L1
+      severity: low
+      issue: "Footnote wording."
+      resolution: "Fixed as in M6 ('p. 10, footnote 1; the footnote text is on p. 16')."
+    - id: L2
+      severity: low
+      issue: "2015 grouping had no year on the Group line."
+      resolution: "Fixed. 'The 2015 model grouped it under stability.'"
+    - id: L3
+      severity: low
+      issue: "Changes over time table repeated detail already in metric blocks."
+      resolution: "Fixed. Rows trimmed to short facts. Duplication accepted as a dated summary (recorded in yaml section_content)."
+    - id: L4
+      severity: low
+      issue: "Parent page has no TOC."
+      resolution: "Skipped per coordinator. Same as explanation.md; project-level."
+    - id: L5
+      severity: low
+      issue: "Yaml accuracy: terms list included Participants and Metric Card; caveats incomplete."
+      resolution: "Fixed. Participants and Metric Card removed from terms_used_verbatim. Caveats added: fetch-tool summary sourcing for S2 claims and partly summarised S41; verbatim-quote Flesch deviation; survey-history wording as judgement; deliberate report-variant use of glossary Avoid terms."
+
+documentation_assessment_review_cycle_2:
+  reviewer: "nw-documentarist-reviewer (Quill)"
+  review_id: "doc_rev_20261018_dora_reference_c2"
+  verdict: APPROVED
+  conditions:
+    - "User accepts Flesch deviation (47.4 vs 70-80; verbatim quotes and glossary terms)."
+  cycle_1_issue_status: {M1: resolved, M2: resolved, M3: resolved, M4: resolved, M5: resolved, M6: resolved, M7: resolved, L1: resolved, L2: resolved, L3: resolved, L4: not_changed_project_level, L5: resolved}
+  new_issues: []
+  remaining_issues:
+    - {id: R1, severity: deviation_for_user, issue: "Flesch 47.4 below 70-80"}
+    - {id: R2, severity: low, issue: "after-revision measurements not recorded", resolution: "recorded by orchestrator: 1,291 words, 95 sentences, Flesch 47.4"}
+    - {id: R3, severity: low, issue: "no TOC block on parent page reference.md (AGENTS.md); explanation.md has the same gap", action: "project-level decision"}
+  gates: {purity: "about 90-95%, pass", spelling: "0 errors on manual read", broken_links: 0, style: "about 95%, pass", flesch: "47.4, deviation"}

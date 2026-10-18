@@ -21,7 +21,7 @@ How to prepare and run the Software Delivery Performance Learning Hour remotely 
 
 1. Make a copy of the [Miro board] and clear any sticky notes left from a previous session.
 2. Share the board link with Participants in the calendar invite.
-3. Read the [DORA Metrics] explanation so you can answer questions during Readouts.
+3. Read the [DORA Metrics] reference so you can answer questions during Readouts.
 4. Plan the Breakout Rooms for the expected group size:
 
    | Participants | Breakout Rooms | Metrics per room            |
@@ -52,7 +52,7 @@ How to prepare and run the Software Delivery Performance Learning Hour remotely 
 3. Visit rooms to unblock them. Remind them at 10 minutes to prepare their Readout.
 4. Close the rooms after 15 minutes, or when every frame shows the green ready stamp.
 5. Run the Readouts in metric order: Throughput first, then Instability. Keep each to about 3 minutes.
-6. Correct any misunderstanding of a definition after each Readout, using the [DORA Metrics] explanation.
+6. Correct any misunderstanding of a definition after each Readout, using the [DORA Metrics] reference.
 
 ### Conclusions (⏱️ 10 min)
 
@@ -67,4 +67,4 @@ How to prepare and run the Software Delivery Performance Learning Hour remotely 
 2. Export the board or take screenshots of the Metric Cards before clearing it for the next session.
 
 [Miro board]: https://miro.com/app/board/uXjVEYsoYBU=/
-[DORA Metrics]: {% link explanation/dora-metrics.md %}
+[DORA Metrics]: {% link reference/dora-metrics.md %}

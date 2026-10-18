@@ -164,7 +164,7 @@ DORA lists seven common pitfalls. The first seven below follow that list. The la
 - [DORA Metrics][]: the five metrics in more detail.
 - [Facilitation Guide][]: how the Learning Hour uses these ideas.
 
-[DORA Metrics]: {% link explanation/dora-metrics.md %}
+[DORA Metrics]: {% link reference/dora-metrics.md %}
 [Facilitation Guide]: {% link how-to/facilitation-guide.md %}
 [Accelerate]: https://itrevolution.com/product/accelerate/
 [DORA's software delivery performance metrics]: https://dora.dev/guides/dora-metrics/

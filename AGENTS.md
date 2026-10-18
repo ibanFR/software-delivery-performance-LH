@@ -15,6 +15,7 @@ Pages follow the Diátaxis split, one Just the Docs parent page per section:
 - `site/index.md`: the Learning Hour itself (learning goals plus the Connect, Concept, Concrete Practice, Conclusions
   phases with timings). Keep its timings and prompts in sync with the Facilitation Guide.
 - `site/how-to/`: the Facilitation Guide, written as numbered steps for the Facilitator.
+- `site/reference/`: facts to look up during the Learning Hour, such as the five DORA metrics.
 - `site/explanation/`: background reading for Participants.
 
 `docs/research/` sits outside the site and is not published. It holds research notes that back the pages. Research
