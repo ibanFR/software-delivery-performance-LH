@@ -123,9 +123,9 @@ On average, the best teams are fast, and their deployments go wrong less often. 
 
 ## Common Pitfalls
 
-DORA lists seven common pitfalls. The first seven below follow that list. The last three come from the book and from practitioners. Where a point is covered in full under What makes a good measure, this section refers back to it.
+DORA lists seven common pitfalls. The first seven below follow that list. The last five come from the book and from practitioners. Where a point is covered in full under What makes a good measure, this section refers back to it.
 
-**Setting metrics as a goal.** The book's 2018 advice was to ask teams to set targets for these measures. DORA now lists target-setting as its first pitfall. The book also warns that in pathological cultures, measurement becomes control. Quoting Deming, it says "whenever there is fear, you get the wrong numbers" (*Accelerate*, chapter 2). Finster warns that the metrics are often "misapplied as standalone improvement targets" ([Finster, Misuse and Abuse of DORA Metrics]). For the learning-first alternative, see Used for learning, not as a target under What makes a good measure.
+**Setting metrics as a goal.** The book's 2018 advice was to ask teams to set targets for these measures. DORA now lists target-setting as its first pitfall. Finster warns that the metrics are often "misapplied as standalone improvement targets" ([Finster, Misuse and Abuse of DORA Metrics]). For the learning-first alternative, see Used for learning, not as a target under What makes a good measure. Targets also do more harm where people fear the numbers; see Measure in a culture without fear.
 
 **Having one metric to rule them all.** A team can look good on Throughput while Instability rises. See the tension property under What makes a good measure.
 
@@ -137,7 +137,11 @@ DORA lists seven common pitfalls. The first seven below follow that list. The la
 
 **Competing.** Ranking teams against each other encourages gaming and hides shared problems. DORA's aim is "to improve your team's performance over time, not to compete against other teams or organizations" ([DORA's software delivery performance metrics]).
 
-**Focusing on measurement at the expense of improvement.** Teams can spend weeks on dashboards before they change anything. The data may already exist, and a conversation can be a better start. In 2022, Thoughtworks warned that pipeline-only data misses real incidents that affect users ([Thoughtworks Technology Radar]).
+**Focusing on measurement at the expense of improvement.** Teams can spend weeks on dashboards before they change anything. The data may already exist, and a conversation can be a better start, as described under Start with a conversation, not a dashboard. In 2022, Thoughtworks warned that pipeline-only data misses real incidents that affect users ([Thoughtworks Technology Radar]).
+
+**Start with a conversation, not a dashboard.** The [DORA Quick Check] in a retrospective gives a team a baseline in minutes. In 2026, Thoughtworks recommended using the metrics "for team reflection and learning rather than just building complex dashboards" ([Thoughtworks Technology Radar]).
+
+**Measure in a culture without fear.** In pathological and bureaucratic cultures, "measurement is used as a form of control, and people hide information." As Deming said, "whenever there is fear, you get the wrong numbers" (*Accelerate*, chapter 2).
 
 **Treating levels as a maturity model.** The book says "maturity models are not the appropriate tool to use or mindset to have" (*Accelerate*, chapter 1). They assume that each maturity level looks the same in every team, and they can turn a snapshot into a permanent label.
 
@@ -180,4 +184,5 @@ DORA lists seven common pitfalls. The first seven below follow that list. The la
 [Khomh et al. 2012]: https://swat.polymtl.ca/~foutsekh/docs/Khomh-MSR-2012.pdf
 [Lee, review of Accelerate]: https://keunwoo.com/notes/accelerate-devops/
 [Finster, Misuse and Abuse of DORA Metrics]: https://reader.itrevolution.com/library/how-to-misuse-abuse-dora-metrics
+[DORA Quick Check]: https://dora.dev/quickcheck/
 [Thoughtworks Technology Radar]: https://www.thoughtworks.com/radar/techniques/dora-metrics
