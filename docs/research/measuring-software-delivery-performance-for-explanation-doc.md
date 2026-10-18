@@ -326,6 +326,10 @@ DORA's own list [S1] is the anchor. Its headings, verbatim: "Setting metrics as 
 | S34 | Forsgren, Humble, Kim, *Accelerate* (2018) | local epub (IT Revolution) | primary 1.0 | No | **Read in full where cited** (ch. 1-3, 12-15, App. A-C) | Authors' own research; sample drawn partly from Puppet marketing lists (ch. 15) |
 | S35 | DORA, *Accelerate State of DevOps Report 2024* v. 2024.3 | local PDF (dora.dev) | primary 1.0 | No | **Read; printed page cited** | Google Cloud |
 | S36 | DORA, *State of AI-assisted Software Development 2025* v. 2025.2 | local PDF (dora.dev) | primary 1.0 | No | **Read; printed page cited** | Google Cloud; vendor sponsors [S33] |
+| S37 | Kua, "An Appropriate Use of Metrics" (2013-02-19), added in the 2026-10-18 addendum | martinfowler.com | practitioner 0.8 | Yes (written 2013, years before Thoughtworks became a 2025 DORA platinum sponsor [S33]; the article does not discuss DORA) | Fetched x2 (quotes over 125 characters paraphrased by the fetch tool) | Thoughtworks employee at the time; Thoughtworks was a 2025 DORA sponsor [S33] |
+| S38 | De Simone, InfoQ news on SPACE (2021-03-18), added in the 2026-10-18 addendum | infoq.com | practitioner 0.8 | Partly (reports Forsgren et al.) | Fetched | Secondary report of [S29]; used because the paper itself returned 403 (queue.acm.org, cacm.acm.org, dl.acm.org) and the uncw.edu PDF could not be parsed |
+| S39 | IT Revolution, *Accelerate* book page, added in the 2026-10-18 addendum | itrevolution.com | primary-research domain, but used only as a stable link and for bibliographic facts (not evidence) | No | Fetched; product page confirmed (title, authors, 2018-03-27) | **Publisher sales page: commercial interest in the book.** Not cited for any claim about the research |
+| S40 | DORA Quick Check, added in the 2026-10-18 addendum | dora.dev | primary 1.0 | No | Fetched | Same programme |
 
 Post-verification notes: S16 (Tacho) and S30 (TechTarget) are now redundant for every claim they supported. Each claim is re-cited to S35 or S34. S30 is retained only as a pointer. S12 (Lee) is now corroborated by the book on every factual point used (snowball sampling, p < 0.10, "inferential predictive", drives/impacts wording).
 
@@ -486,6 +490,10 @@ Remaining nuance: the 2023 report (cluster shares 2023, "31%" High and "17%" Low
 [S34] Forsgren, N., Humble, J., Kim, G. *Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations*. IT Revolution, 2018. Local copy `harness/accelerate-the-science-of-devops.epub`. Cited by chapter/appendix (epub has no stable page numbers).
 [S35] DORA (Google Cloud). *Accelerate State of DevOps Report 2024*, v. 2024.3. Local copy `harness/2024-dora-accelerate-state-of-devops-report.pdf` (also https://dora.dev/research/2024/dora-report/). Cited by printed page.
 [S36] DORA (Google Cloud). *State of AI-assisted Software Development 2025*, v. 2025.2. Local copy `harness/2025_state_of_ai_assisted_software_development.pdf` (also https://dora.dev/research/2025/dora-report/). Cited by printed page.
+[S37] Kua, P. "An Appropriate Use of Metrics". martinfowler.com. 2013-02-19. https://martinfowler.com/articles/useOfMetrics.html. Accessed 2026-10-18.
+[S38] De Simone, S. "SPACE, a New Framework to Understand and Measure Developer Productivity". InfoQ. 2021-03-18. https://www.infoq.com/news/2021/03/space-developer-productivity. Accessed 2026-10-18.
+[S39] IT Revolution. "Accelerate" (book page). itrevolution.com. https://itrevolution.com/product/accelerate/. Accessed 2026-10-18.
+[S40] DORA. "DORA Quick Check". dora.dev. https://dora.dev/quickcheck/. Accessed 2026-10-18.
 
 ## Research Metadata
 Examined: about 50 web pages and search result sets plus the three local primaries | Cited: 36 | DORA-programme sources (count as one for independence): 21, or 22 on primary-research domains including Finster | Independent sources: 10 full plus 2 partial | Confidence by section (after review 1): §1 Medium-High, §2 High (method) / Medium (org-performance link: DORA finding, weak independent corroboration), §3 Medium (no-trade-off: DORA finding, weak independent corroboration) / High (exceptions, except 2022 Medium), §4 High, §5 High (5.6 Medium-High) | Initial tool failures (resolved by orchestrator text extraction): epub unzip, PDF render, web PDFs over 10 MB. Still unresolved: HTTP 403 (queue.acm.org, medium.com), unparsable PDFs (zhaw.ch, vuw.ac.nz, usenix.org, uncw.edu) | Output: docs/research/measuring-software-delivery-performance-for-explanation-doc.md
@@ -561,6 +569,209 @@ issues_identified:
   evidence_quality:
     - {severity: medium, issue: "2025 p.131 citation for variant correlation wording not re-checked", recommendation: "Confirm page", status: "confirmed by orchestrator: PDF page 131"}
 quality_scores: {source_bias: 0.70, evidence_quality: 0.85, replicability: 0.85, completeness: 0.85}
+approval_status: "approved"
+blocking_issues: []
+```
+
+## Addendum: restructure (2026-10-18)
+
+**Scope**: Delta research for the page restructure into: Overview; Software Delivery is hard to measure; Why measuring matters; What makes a good measure; The Accelerate Research; The DORA framework; Common Pitfalls; Further reading. The approved body above is unchanged. New sources S37-S40 were added to the Source Analysis and Full Citations. New passages from existing local primaries ([S34] ch. 2 "Driving Change" and ch. 14; [S35] pp. 7, 74; [S36] pp. 13, 20, 22) were read on 2026-10-18 from the extracted text. Accessed 2026-10-18 for all web sources in this addendum.
+
+### A1. Coverage map
+
+| New section | Backing findings | Confidence | Delta needed? |
+|---|---|---|---|
+| Overview | Executive Summary; source-bias caveat; Writer's brief | High (it summarises the page) | No |
+| Software Delivery is hard to measure | 1.1 (invisible inventory, arbitrary units [S34 ch. 2]; Fowler [S6]); 1.2 (lines of code, velocity, utilization [S34 ch. 2], [S6]) | Medium-High (1.1); Medium-High LOC, Medium velocity/utilization (1.2) | No. Gap 3 (velocity, no independent source) still stands |
+| Why measuring matters | 1.4 (leading/lagging [S1]); 2.3 (organizational performance, DORA-only); new A2 | Medium-High for feedback (A2.1); Medium for improvement as experiment and for shared language (A2.2, A2.3); Medium for the organizational-outcome link (DORA finding, weak independent corroboration, Gap 1) | **Yes**, filled in A2 |
+| What makes a good measure | 1.3 (two traits [S34 ch. 2], [S4], [S6]); scattered in 5.1-5.5; new A3 | See A3 per property: High for team/system level, learning not targets, same team over time; Medium-High for cheap to collect; Medium for paired measures and for leading/lagging | **Yes**, filled in A3 |
+| The Accelerate Research | 2.1-2.5; plus §3 as a subsection (see A5) | High (method, limits); Medium (predictive claims) | No |
+| The DORA framework | 4.1-4.4 | High (definitions, history, clusters, profiles); Medium (model as causal) | No |
+| Common Pitfalls | 5.1-5.8 | High (5.1, 5.4, 5.5); High/Medium-High (5.2, 5.3, 5.6); Medium (5.7, 5.8) | No. A3 adds [S37] as one more independent source for 5.1 |
+| Further reading | New A4 | High (all URLs fetched or already cited) | **Yes**, filled in A4 |
+
+### A2. "Why measuring matters" (kept distinct from "hard to measure")
+
+The "hard to measure" section rests on Findings 1.1 and 1.2 (why measuring is difficult and why output measures fail). This section answers a different question: what a team gains from measuring well. Four strands, each with its own evidence.
+
+**A2.1 Feedback: knowing whether you are improving.**
+- dora.dev [S1]: "Technology-driven teams need ways to measure performance so that they can assess how they're doing today," (the sentence goes on to say: prioritize improvements and validate progress; the remainder was paraphrased by the fetch tool, so quote only the first clause).
+- 2024 report p. 7 [S35]: improvement "requires that you assess how you're doing today, identify areas to invest in and make improvements, and have feedback loops to tell you how you're progressing."
+- 2024 report p. 74 [S35]: "The value in the metrics lies in their ability to tell you if you are improving."
+- 2025 report p. 22 [S36]: "Changes to these metrics over time can provide insight into whether things are improving or deteriorating."
+- *Accelerate* ch. 2, "Driving Change" [S34]: with a rigorous measure "we can make evidence-based decisions on how to improve the performance of teams" and "We can measure their improvement—or backsliding—over time."
+- Independent: Kua [S37]: "Looking at trends provides more interesting information than whether or not a target is met." and "Double loop learning requires more data about what is actually going on."
+**Confidence**: Medium-High (DORA programme counted once, plus one independent practitioner [S37]).
+
+**A2.2 Improvement as experiment.**
+- 2024 report p. 7 [S35] lists an "experimental approach to improvement": identify an outcome, "Measure your baseline or current state", hypothesise, commit to a plan, do the work, "Measure the progress you've made", repeat. It adds: "Expect your results to differ" and frames the team's own measurement as how to "validate our findings".
+- 2025 report p. 22 [S36] walks through a retrospective in which a team notices Change Lead Time rising, looks for a cause (slower code reviews), and acts.
+**Confidence**: Medium (DORA only; consistent with A2.1).
+**Analysis (interpretation)**: This links "why measure" to "correlation, not causation": DORA itself tells teams to test its findings locally. That makes a good bridge to the Accelerate Research section.
+
+**A2.3 Shared language and shared ownership.**
+- *Accelerate* ch. 2 [S34]: the chosen measure "focuses on global, system-level goals, and measures outcomes that different functions must collaborate in order to improve."
+- *Accelerate* ch. 14 [S34] on definitions: "Different teams can refer to very different (or even slightly different) measures by the same name", e.g. "lead time" and "cycle time", which "are often used interchangeably and are quite often confused, though they measure different things." With a common instrument, "All respondents are now working from the same items, the same words, and the same definitions."
+- dora.dev [S1]: sharing the metrics "fosters collaboration and shared ownership of the delivery process." "Isolating teams with specific metrics can lead to friction and finger-pointing."
+- 2025 report p. 20 [S36]: measuring at the application or service level "encourages cross-functional ownership and accountability for improvement."
+- Independent: Kua [S37]: "The nature of software development means most work is knowledge work, and is therefore hard to observe." (supports the need to make work visible, not the shared-language claim directly).
+**Confidence**: Medium (DORA programme counted once; no independent source states the shared-language benefit directly). Note: the ch. 14 passage is written about survey design, so present it as "the same names can hide different measures", not as a DORA finding about teams.
+
+**A2.4 Link to organizational outcomes (DORA finding, weak independent corroboration).**
+- *Accelerate* ch. 2 [S34]: high performers "twice as likely" to exceed profitability, market share and productivity goals (2014-2017 data, self-rated). The same chapter says "This demonstrates that your organization's software delivery capability can in fact provide a competitive advantage to your business." That sentence overstates a correlational, self-rated finding; do not quote it without the caveat.
+- dora.dev [S1]: the metrics are leading indicators of "organizational performance and employee well-being" (paraphrase; see Finding 1.4).
+- 2022 moderator: depends on reliability [S14].
+**Confidence**: Medium. DORA only; no independent replication (Gap 1). Keep the caveat box on the page.
+
+**Writer's note**: Order the section from strongest and most independent (feedback, A2.1) to weakest (organizational outcomes, A2.4). Do not reuse "inventory is invisible" or Fowler [S6] here; they belong to "hard to measure".
+
+### A3. "What makes a good measure"
+
+*Accelerate* ch. 2 names two traits (global outcome; outcomes not output; Finding 1.3). The properties below extend that list. Each is phrased as a property, with evidence and confidence.
+
+**A3.1 Team or system level, not individual.**
+- *Accelerate* ch. 2 [S34]: earlier measures "focus on individual or local measures rather than team or global ones."
+- 2024 report p. 74 [S35]: "The four key metrics should be used at the application and service levels, and not at the organization or line-of-business level. The metrics should be used to visualize your efforts in continuous improvement and not to compare teams — and certainly not to compare individuals."
+- dora.dev [S1]: "These metrics are meant to be applied at the application or service level."
+- Partly independent (Forsgren co-authored SPACE): SPACE abstract [S29]: developer productivity "cannot be measured by a single metric or dimension." InfoQ's report of the paper [S38] (secondary; the paper's wording is unverified, Gap 10) says SPACE suggests metrics at individual, team or group, and system levels, and quotes Forsgren that activity metrics should not be used on their own to reward or penalise developers. Paraphrase this with attribution to InfoQ; do not put it in quotation marks as SPACE's wording. Kua [S37]: "Many organizations link these numbers to individual performance targets" (presented as a problem). Finster [S28]: "the pitfalls of measuring individuals".
+**Confidence**: High. Note the 2024 p. 74 nuance: not individual, and also not organization-wide. The level is the application or service.
+**Caveat**: According to InfoQ's report [S38], SPACE includes an individual level among its levels, and the warning reported there is against using activity metrics alone to reward or penalise. Do not cite SPACE as saying "never measure individuals". High confidence rests on DORA plus Kua [S37] and Finster [S28], not on SPACE.
+
+**A3.2 Several measures held in tension (Throughput and Instability paired).**
+- dora.dev [S1]: "Teams should identify multiple metrics, including some with a healthy amount of tension between them."
+- *Accelerate* ch. 2 [S34]: the authors chose tempo measures and then "wanted to investigate whether teams who improved their performance were doing so at the expense of the stability of the systems they were working on", so they added recovery time and Change Fail Rate. The "wall of confusion" example ("rewarding developers for throughput and operations for stability", in the book's words) shows what happens when the paired measures are owned by different groups.
+- *Accelerate* ch. 2 [S34] on utilization: "it's essential that we manage utilization to balance it against lead time in an economically optimal way" (a second paired-measure example from the book).
+- Partly independent, secondary only: InfoQ's report of SPACE [S38] says, in paraphrase, that metrics shape decisions and behaviour, so focusing on a single metric risks unintended consequences (the sentence was truncated by the fetch tool; paraphrase with attribution to InfoQ, no quotation marks). The widely cited SPACE phrase "a constellation of metrics in tension" could not be verified against the paper (403 on queue.acm.org, including by curl, and on cacm.acm.org and dl.acm.org; uncw.edu PDF unparsable); it appears only in search snippets. **Do not quote it** unless verified (Gap 10).
+- 2025 report p. 4 [S36]: DORA reports that AI adoption "now improves software delivery throughput" but "still increases delivery instability". This is a DORA-reported association, not a demonstration; it illustrates that the two groups can move apart, so tracking Throughput alone would not show the Instability side.
+**Confidence**: Medium. DORA counted once; the only non-DORA support is SPACE (Forsgren co-author) through a secondary report. No verified independent source on paired measures was found.
+
+**A3.3 Used for learning, not as a target (Goodhart).**
+- dora.dev [S1]: "Setting metrics as a goal" pitfall; mandates increase the likelihood that teams "will try to game the metrics."
+- 2025 report p. 20 [S36]: "The goal is continuous learning and improvement, not necessarily achieving top software delivery performance."
+- 2024 report p. 14 [S35]: "Improving should be more important to a team than reaching a particular performance level."
+- *Accelerate* ch. 14, footnote 1 [S34]: collect data "with an eye toward improvement—without telling everyone they must answer positively *or else*", otherwise "You would get the data you want—good responses—but it would be meaningless."
+- Independent: Kua [S37]: without an articulated purpose "people may find ways, unintentionally working against the implicit goal"; "Looking at trends provides more interesting information than whether or not a target is met." Manheim and Garrabrant [S31] on Goodhart failure modes. Finster [S28]: "misapplied as standalone improvement targets".
+**Confidence**: High (DORA, two independent practitioners, one academic). Keep Conflict 6 in mind: *Accelerate* (2018) told readers to set targets.
+
+**A3.4 Leading and lagging.**
+- dora.dev [S1]: "These software delivery performance metrics can be viewed as both leading and lagging indicators." Leading indicators "typically signal potential future changes in a system"; lagging indicators reflect past performance. The metrics lead organizational performance and well-being and lag the practices behind them.
+- 2025 report p. 14 [S36]: the five metrics "are ultimately outcomes. They tell you what is happening, but they don't explain why." That is, relative to capabilities they are lagging.
+**Confidence**: Medium (DORA only; no independent source on leading/lagging for software delivery found in this run). The "leading" half depends on the organizational-performance link (Gap 1), so phrase it as DORA's model.
+**Analysis (interpretation)**: For the page, the useful idea is "pair outcome measures (the five metrics) with the capabilities that drive them", not a general leading/lagging theory.
+
+**A3.5 Comparable over time for the same team, not across teams.**
+- 2025 report p. 20 [S36]: "the best, most insightful comparisons of software delivery performance are for the same application or service over time."
+- 2025 report p. 13 [S36]: "Measuring these over time provides insight into how software delivery performance is changing."
+- dora.dev [S1]: "The goal is to improve your team's performance over time, not to compete against other teams or organizations"; pitfall "Making disparate comparisons".
+- *Accelerate* ch. 2 [S34]: velocity is "a relative and team-dependent measure"; contexts "render their velocities incommensurable."
+- Independent: Kua [S37]: "Favor tracking trends over absolute numbers"; "Management should be interested in trends to observe the effects of changes to this ecosystem." Finster [S28]: metrics "are most effective ... when used by teams to improve their own unique process and outcomes rather than for comparing teams to each other."
+**Confidence**: High.
+**Conflict to note**: *Accelerate* ch. 2 (2018) also says "We can compare and benchmark teams against the larger organizations they work in and against the wider industry" [S34], and the 2025 report p. 20 is headed "How do you compare?" and shows industry distributions. DORA offers industry distributions as context, while saying the best comparison is the same service over time. Present benchmarks as context, not as a scoreboard (see Conflict 6).
+
+**A3.6 Cheap enough to collect.**
+- *Accelerate* ch. 2 [S34]: batch size is hard to measure, so "we settled on deployment frequency as a proxy for batch size since it is easy to measure and typically has low variability." The delivery part of lead time "is easier to measure and has a lower variability" than the design part.
+- *Accelerate* ch. 14 [S34]: "Often, the strongest reason to use surveys is speed and ease of data collection."
+- dora.dev [S1]: building integrations "to get precise data about your software delivery performance" "might not be worth the initial investment"; "it might be better to start with having conversations", the Quick Check [S40], or a tool with prebuilt integrations.
+- 2025 report p. 22 [S36]: "Precision for these metrics isn't always required, and teams will generally know how they are changing over time."
+- Independent: Kua [S37] notes that defining, tracking, monitoring and interpreting metrics takes time and resources that could go to other goals (paraphrase; the sentence exceeded the fetch tool's quote limit, so **do not quote it**).
+**Confidence**: Medium-High (DORA plus one independent practitioner, paraphrase only).
+**Analysis (interpretation)**: The *Accelerate* passage is the strongest framing for Participants, but keep it to what the book says: deployment frequency was chosen as a proxy for batch size because it "is easy to measure and typically has low variability", and the delivery part of lead time is described as one that "is easier to measure and has a lower variability". Do not generalise this to all four measures.
+
+**Properties searched for but not added**: "Change metrics when they stop driving change" (Kua [S37]) is a fifth property if the page wants it (verified heading). No trusted source was found that frames "validity and reliability" as a practitioner property beyond *Accelerate* ch. 2 ("a valid, reliable measure") and ch. 13; the page can mention it in the Accelerate Research section instead.
+
+### A4. Further reading (curated)
+
+| # | Item | Stable URL | Why read it |
+|---|---|---|---|
+| 1 | Forsgren, Humble, Kim, *Accelerate* (IT Revolution, 2018) [S34] | https://itrevolution.com/product/accelerate/ [S39] (publisher page, fetched; confirms title, authors, 2018-03-27) | The original argument for the four measures; ch. 2 explains why output measures fail and what a good measure needs. |
+| 2 | DORA, "DORA's software delivery performance metrics" [S1] | https://dora.dev/guides/dora-metrics/ | The current definitions of the five metrics and DORA's own list of pitfalls. |
+| 3 | DORA, "A history of DORA's software delivery metrics" [S2] | https://dora.dev/guides/dora-metrics/history/ | Shows how the metrics changed from 2014 to 2024 and why. |
+| 4 | DORA, *Accelerate State of DevOps Report 2024* [S35] | https://dora.dev/research/2024/dora-report/ | The last report with ranked performance levels; explains the Throughput and Instability factors (the report itself names the second one "stability") and its own methodology limits. |
+| 5 | DORA, *State of AI-assisted Software Development 2025* [S36] | https://dora.dev/research/2025/dora-report/ | Replaces ranked levels with seven team profiles and reports AI adoption associated with higher Throughput and higher Instability. |
+| 6 | Forsgren et al., "The SPACE of Developer Productivity", *ACM Queue* 19(1), 2021 [S29] | https://doi.org/10.1145/3454122.3454124 (DOI; resolves to the ACM publisher page, which returned 403 to the fetch tool and to curl) | Argues that developer productivity "cannot be measured by a single metric or dimension" (abstract [S29]). |
+| 7 | Fowler, "CannotMeasureProductivity" (2003) [S6] | https://martinfowler.com/bliki/CannotMeasureProductivity.html | A short, pre-DORA argument that output cannot be measured. |
+| 8 | Kua, "An Appropriate Use of Metrics" (2013) [S37] | https://martinfowler.com/articles/useOfMetrics.html | Practical rules for using metrics without turning them into targets. |
+| 9 | Finster, "How to Misuse & Abuse DORA Metrics" (2022) [S28] | https://reader.itrevolution.com/library/how-to-misuse-abuse-dora-metrics | An independent practitioner's catalogue of how DORA metrics go wrong. |
+| 10 | Lee, "A review of *Accelerate*" (2022) [S12] | https://keunwoo.com/notes/accelerate-devops/ | A critical reading of the research method. **Off the trusted list (keunwoo.com); label it as a personal critique.** |
+
+Optional extras if a tool link is wanted: DORA Quick Check https://dora.dev/quickcheck/ [S40] ("five multiple-choice questions" per the fetched page). Excluded: Tacho [S16] (vendor), TechTarget [S30] (off-list, redundant).
+
+### A5. Where "Throughput and Instability tend to move together" fits
+
+**Recommendation**: a subsection of The Accelerate Research, for example `### Throughput and Instability tend to move together`, placed after the headline finding and before the limits list.
+**Rationale**:
+- The finding is first stated in *Accelerate* ch. 2 ("Astonishingly...") and Appendix B ("they move in tandem") [S34]. It is a research result, not a framework definition.
+- It carries the same "DORA finding, weak independent corroboration" caveat (Gap 2) as the organizational-performance link (Gap 1), so the two caveats sit together.
+- The exceptions (2016 [S34]; 2024 Medium vs High [S35 p. 14]; 2024-2025 AI divergence [S35 pp. 39-40], [S36 p. 4]) can follow as a short list, and the limits list can follow that.
+**Split to avoid duplication**: keep in The DORA framework only the structural facts: two factors, correlated but statistically distinct ([S34 ch. 3]; [S35] pp. 11-12), and why Failed Deployment Recovery Time sits under Throughput ([S35] p. 12). Link back from there to the subsection. The pairing idea also feeds A3.2 ("several measures held in tension") as a one-line forward reference; do not restate the evidence there.
+**Mechanisms** (small batches, "if it hurts, do it more often" [S23], [S24]) stay in the subsection; they explain the finding, so they belong with it.
+
+### A6. Addendum gaps and conflicts
+
+- **Gap 10: SPACE full text not verified.** queue.acm.org, cacm.acm.org and dl.acm.org returned 403; the uncw.edu PDF downloaded but could not be parsed (no PDF renderer). The orchestrator's curl attempt on queue.acm.org also returned 403. SPACE claims in A3 rest on the abstract [S29] and InfoQ's report [S38]. **Rule**: quote SPACE only from the abstract [S29] ("cannot be measured by a single metric or dimension"); anything reported by InfoQ (levels, reward/penalise warning, single-metric warning) is paraphrased with attribution to InfoQ and never put in quotation marks as SPACE's wording. "Constellation of metrics in tension" and "at least three dimensions" are unverified; do not quote them. **Recommendation**: extract the PDF text locally (as was done for the DORA reports) and re-check.
+- **Gap 11: Leading/lagging has no independent source.** Only dora.dev [S1]. Medium confidence.
+- **Gap 12: Shared-language benefit has no independent source.** A2.3 is DORA-only.
+- **Kua [S37] quote limits.** Four sentences over 125 characters (cost of metrics, arbitrary targets, gaming, losing purpose) were only paraphrased by the fetch tool. Quote only the verified sentences listed above.
+- **Conflict 8 (new): benchmarking.** *Accelerate* ch. 2 and the 2025 report's "How do you compare?" page offer industry comparison, while DORA also says the best comparison is the same service over time ([S36] p. 20) and lists "Making disparate comparisons" as a pitfall [S1]. **Assessment**: compatible if industry data is context and the team's own trend is the measure. Same evolution as Conflict 6.
+
+### A7. Addendum metadata
+New sources: 4 (S37 practitioner, independent; S38 practitioner, secondary report of SPACE; S39 and S40 DORA programme or publisher). New passages from existing primaries: [S34] ch. 2 (Driving Change, deployment frequency as proxy), ch. 14; [S35] pp. 7, 74; [S36] pp. 13, 20, 22. Failed fetches: queue.acm.org, cacm.acm.org, dl.acm.org (403); people.uncw.edu PDF (unparsable). Cited sources now 40; DORA-programme share 23 of 40 (58%), counted as one for independence. S39 is a publisher sales page used only as a stable link.
+
+## Addendum Review 1 (Scholar)
+
+```yaml
+review_id: "research_rev_20261018_addendum_restructure"
+reviewer: "nw-researcher-reviewer (Scholar)"
+date: "2026-10-18"
+verdict: "NEEDS_REVISION"
+iteration: 1
+max_iterations: 2
+spot_checks: {local_quotes_checked: 24, passed: 24, failed: [], not_verifiable_locally: ["S1 new uses", "S37 Kua", "S38 InfoQ", "S40 Quick Check", "S39 product facts"]}
+issues_identified:
+  - {severity: high, issue: "SPACE wording quoted only via InfoQ (A3.1, A3.2) unverified against paper; Gap 10 does not cover it", recommendation: "Gap 10: quote SPACE only from S29 abstract; paraphrase InfoQ-reported wording with attribution, no quotation marks; tie warning to phrases actually used"}
+  - {severity: high, issue: "A3.2 Medium-High rests on SPACE (DORA co-author) via secondary report; no verified independent source", recommendation: "Downgrade to Medium or add verified independent source"}
+  - {severity: medium, issue: "A1 table Medium-High for shared language vs A2.3 Medium", recommendation: "Align to Medium"}
+  - {severity: medium, issue: "A5 cites Gap 2 for org-performance link; should be Gap 1", recommendation: "Fix cross-reference"}
+  - {severity: medium, issue: "Glossary breaches: 'speed' (A3.2 heading, bullet), 'stability' (A4 row 4)", recommendation: "Use Throughput / Instability"}
+  - {severity: medium, issue: "A3.2 AI divergence framed as live example of misleading", recommendation: "Describe as DORA-reported association"}
+  - {severity: medium, issue: "A3.6 'picked partly because easy and stable' generalises deployment-frequency rationale", recommendation: "Limit to deployment frequency; 'low variability'"}
+  - {severity: medium, issue: "S37 Kua independence without noting Thoughtworks was 2025 DORA sponsor", recommendation: "Add sponsor note to S37 bias column"}
+  - {severity: medium, issue: "Further reading row 6 describes unread SPACE content", recommendation: "Limit to abstract-level claim"}
+  - {severity: low, issue: "S39 publisher sales page tiered primary 1.0", recommendation: "Flag publisher interest"}
+  - {severity: low, issue: "Further reading row 6 uses queue.acm.org id rather than DOI", recommendation: "Prefer DOI 10.1145/3454122.3454124"}
+quality_scores: {source_bias: 0.75, evidence_quality: 0.85, replicability: 0.85, completeness: 0.85}
+```
+
+## Addendum Revision 1 response
+
+No new research was done; all fixes are wording, rating or cross-reference changes.
+
+1. **High, SPACE wording via InfoQ**: A3.1 and A3.2 now quote SPACE only from the abstract [S29]. InfoQ-reported content (levels, reward/penalise warning, single-metric warning) is paraphrased with attribution to InfoQ, without quotation marks. Gap 10 now states this rule and records that the orchestrator's curl attempt on queue.acm.org also returned 403.
+2. **High, A3.2 rating**: Downgraded to Medium. The confidence line says DORA counts once and SPACE (Forsgren co-author) is only available through a secondary report. A3.1 now says its High rating rests on DORA plus Kua [S37] and Finster [S28], not on SPACE.
+3. **Medium, A1 vs A2.3**: The A1 row now reads Medium-High for feedback (A2.1) and Medium for improvement as experiment and shared language (A2.2, A2.3). The A3 row now lists paired measures as Medium.
+4. **Medium, A5 cross-reference**: Now "(Gap 2) as the organizational-performance link (Gap 1)".
+5. **Medium, glossary**: A3.2 heading reads "Throughput and Instability paired"; the "single speed measure" wording is gone; the wall-of-confusion paraphrase is now the book's own quote. A4 row 4 reads "Throughput and Instability factors (the report itself names the second one 'stability')". A4 row 5 rephrased the same way.
+6. **Medium, AI divergence framing**: A3.2 now describes it as "a DORA-reported association, not a demonstration". A4 row 5 says "reports AI adoption associated with".
+7. **Medium, A3.6 generalisation**: The analysis is limited to deployment frequency ("easy to measure and typically has low variability") and the delivery part of lead time, with an instruction not to generalise to all four measures.
+8. **Medium, S37 sponsor note**: The S37 row now notes that Thoughtworks was a 2025 DORA platinum sponsor [S33], and that the 2013 article predates the sponsorship and does not discuss DORA.
+9. **Medium, Further reading row 6 content**: Limited to the abstract claim ("cannot be measured by a single metric or dimension").
+10. **Low, S39 tier**: The S39 row is now flagged as a publisher sales page with commercial interest, used only as a stable link and for bibliographic facts.
+11. **Low, row 6 URL**: Now https://doi.org/10.1145/3454122.3454124.
+
+## Addendum Review 2 (Scholar)
+
+```yaml
+review_id: "research_rev_20261018_addendum_restructure_r2"
+reviewer: "nw-researcher-reviewer (Scholar)"
+date: "2026-10-18"
+verdict: "APPROVED"
+iteration: 2
+max_iterations: 2
+issues_from_review_1: {resolved: 11, open: 0}
+issues_identified:
+  - {severity: low, issue: "A3.6 'was preferred because' motive not in source for lead time", recommendation: "Reword to 'is described as easier to measure'", status: "fixed by orchestrator"}
+  - {severity: low, issue: "Web-only quotes (Kua, dora.dev S1, S40) unverifiable in this review", recommendation: "Keep fetch record; verify before publishing if page quotes them", status: "Kua: orchestrator fetched martinfowler.com/articles/useOfMetrics.html on 2026-10-18; all S37 quotes match verbatim; article does not mention DORA"}
+quality_scores: {source_bias: 0.80, evidence_quality: 0.88, replicability: 0.90, completeness: 0.90}
 approval_status: "approved"
 blocking_issues: []
 ```

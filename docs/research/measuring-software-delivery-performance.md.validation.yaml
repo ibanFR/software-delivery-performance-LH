@@ -1,168 +1,158 @@
 validation_report:
   document: site/explanation/measuring-software-delivery-performance.md
-  generated_for: "Explanation page rewrite from scratch (front matter kept); revision cycle 1 applied"
-  evidence_source: docs/research/measuring-software-delivery-performance-for-explanation-doc.md (approved; Review 2 APPROVED)
-  method_note: "Word count and Flesch measured by the orchestrator with a Python Flesch script (body after TOC, link definitions removed)."
+  version: "trim pass (2026-10-18, after orchestrator measurement 3,477 words, Flesch 53.3). H2 sections: Overview; Software Delivery is hard to measure; Why measuring matters; What makes a good measure; The Accelerate Research (H3 Why Throughput and Instability tend to move together); The DORA framework; Common Pitfalls; Further reading"
+  evidence_source: "docs/research/measuring-software-delivery-performance-for-explanation-doc.md (approved body; Addendum restructure 2026-10-18; Addendum Review 2 APPROVED)"
+  method_note: "No shell or word-count tool was available to the author. Word count and Flesch are measured by the orchestrator. Author estimate after trim: roughly 2,600-2,700 words, not verified."
+
+  word_count:
+    measured_before_trim: 3477
+    measured_after_trim: 2546
+    sentences_after_trim: 236
+    measured_by: "orchestrator (Python script)"
+    target: "2,600 or fewer"
+    measured_after_review_1: 2472
+    sentences_after_review_1: 228
+    status: "Met (2,472 words)."
+    per_section_before_trim: {Overview: 133, Hard_to_measure: 277, Why_measuring_matters: 442, Good_measure: 706, Accelerate_Research: 920, DORA_framework: 415, Pitfalls: 460, Further_reading: 326}
+  flesch_reading_ease:
+    measured_before_trim: 53.3
+    measured_after_trim: 51.1
+    measured_after_review_1: 49.7
+    measured_by: "orchestrator (Python script)"
+    status: "Below the 53.3 floor set in the trim brief and below the 65 target. Remaining drag: syllables per word from fixed glossary terms. Flagged for the user."
+
+  render_fix:
+    issue: "Further reading list items '- [Label]: text' were parsed as link definitions by kramdown and rendered empty (orchestrator fix)."
+    applied: "Further reading items now use '- [Label][]: text'. No body line starts with '[Label]:' except the real definitions at the bottom."
 
   doc_type:
     declared: explanation
-    purity_estimate: "~90% explanation. Discursive, answers why. Bullet lists and one 5-row grouping table are used for grouping and limits only. No step-by-step instructions."
+    purity_estimate: "~90% explanation. One grouping table, a three-item bullet list of bad measures, a four-sentence method, a two-item limits list, and a further reading list. No step-by-step instructions."
 
-  word_count: "2,316 words, 199 sentences (measured). Target 2,200 or less: about 5% over, accepted."
-
-  flesch_reading_ease:
-    status: "54.2 measured (ASL 11.6, ~1.665 syllables/word). Gate 70-80 not achievable: mandated glossary terms and verbatim quotes fix most syllables. Recorded as deviation pending user acceptance."
-    revision_applied: "Cycle 2 split long sentences. Cycle 3 swapped none of the glossary terms or quotes, and reworded some sentences to remove repeated points. Re-measure."
-
-  spelling:
-    variant: American (matches existing site: 'organizational', 'program')
-    revision_applied: "'programme' changed to 'program'. No other British spellings found on manual review."
-    result: "No spelling errors found on manual review. Tool check not run."
-
-  glossary_compliance:
-    terms_used_verbatim:
-      - Software Delivery Performance
-      - Throughput
-      - Instability
-      - Change Lead Time
-      - Deployment Frequency
-      - Failed Deployment Recovery Time
-      - Change Fail Rate
-      - Deployment Rework Rate
-      - Participants
-      - Facilitation Guide
-      - Learning Hour
-    avoid_terms_check:
-      - term: MTTR / mean time to restore / time to restore service
-        status: absent
-      - term: change failure rate (lowercase)
-        status: absent
-      - term: stability (as group name)
-        status: absent outside quotes. Quoted uses: "delivery stability" (DORA 2024 pp. 39-40) and "software delivery stability" (DORA 2024 pp. 11-12, the group label), each with Instability stated next to it
-      - term: velocity
-        status: present only as the subject being critiqued (allowed)
-      - term: speed
-        status: present only inside DORA's quoted phrase; prose uses faster
-      - term: release frequency / release cadence / cycle time / hotfix / rework rate / attendee / student / learner
-        status: absent
-      - term: lead times (generic, inside a book quote about utilization)
-        status: present; the glossary avoid term is 'lead time for changes', not 'lead times'. Low risk, noted for review
-    compliance_estimate: "100% of checked terms; 1 low-risk generic usage noted"
-
-  link_check:
-    internal:
-      - "[DORA Metrics]: {% link explanation/dora-metrics.md %}  (file exists: site/explanation/dora-metrics.md)"
-      - "[Facilitation Guide]: {% link how-to/facilitation-guide.md %}  (file exists: site/how-to/facilitation-guide.md)"
-    external_labels_defined:
-      - "DORA's software delivery performance metrics -> https://dora.dev/guides/dora-metrics/"
-      - "DORA FAQ -> https://dora.dev/faq/"
-      - "DORA 2022 research -> https://dora.dev/research/2022/  (added in revision 1; research S14)"
-      - "DORA 2024 report -> https://dora.dev/research/2024/dora-report/"
-      - "DORA 2025 report -> https://dora.dev/research/2025/dora-report/"
-      - "DORA 2025 sponsors -> https://dora.dev/research/2025/sponsors/  (added in revision 1; research S33, the web page, not the PDF)"
-      - "DORA measurement frameworks -> https://dora.dev/research/2025/measurement-frameworks/"
-      - "Fowler, Cannot Measure Productivity -> https://martinfowler.com/bliki/CannotMeasureProductivity.html"
-      - "Fowler, Frequency Reduces Difficulty -> https://martinfowler.com/bliki/FrequencyReducesDifficulty.html"
-      - "Continuous Delivery principles -> https://continuousdelivery.com/principles/"
-      - "Khomh et al. 2012 -> https://swat.polymtl.ca/~foutsekh/docs/Khomh-MSR-2012.pdf"
-      - "Lee, review of Accelerate -> https://keunwoo.com/notes/accelerate-devops/"
-      - "Finster, Misuse and Abuse of DORA Metrics -> https://reader.itrevolution.com/library/how-to-misuse-abuse-dora-metrics"
-      - "Thoughtworks Technology Radar -> https://www.thoughtworks.com/radar/techniques/dora-metrics  (used for the 2022 pipeline-data blip and the 2026 AI lines-of-code blip)"
-    integrity:
-      defined_labels: 16
-      used_labels: 16
-      undefined_references: 0
-      unused_definitions: 0
-    plain_text_citations_without_link: "(Accelerate, chapter N) and Forsgren et al. ACM Queue 2021. No stable URL for the book in the approved research."
-    external_link_status: "Not fetched in this run. URLs are taken from the approved research Full Citations list. Khomh PDF host and Lee's site are flagged as outside the trusted list in the research."
-
-  collapse_detection:
-    clean: true
-    checks:
-      tutorial_creep: "None. No walkthrough or setup steps."
-      how_to_creep: "None. No numbered do-this steps. The one numbered list (Accelerate method) describes how the research worked, not what Participants should do."
-      reference_dump: "None. One small grouping table (5 metrics, 2 groups). Definitions are quoted in two sentences and linked to the DORA Metrics page."
-      explanation_task_drift: "Minor. Guidance phrases ('Read the levels as a guide', 'Treat the profiles as illustrations') are interpretive, not procedures. Acceptable."
-      hybrid_horror: "None. Only explanation content plus links to the reference page and the Facilitation Guide."
+  section_content_after_trim:
+    - "Overview: orientation, audience, the two headline findings with the weak-corroboration caveat in prose, and the 'research guides, does not prove cause' idea."
+    - "Software Delivery is hard to measure: Accelerate ch. 2 invisible-inventory quote; Kua knowledge-work quote; arbitrary units and Fowler 2003; three naive measures (lines of code, velocity, utilization)."
+    - "Why measuring matters: four strands (feedback; improvement as experiment; shared language and ownership; organizational outcomes). One caveat box, here."
+    - "What makes a good measure: Accelerate's two traits, then six properties in one short paragraph each (team or system level; several measures in tension; learning not targets; leading and lagging; comparable over time; cheap to collect)."
+    - "The Accelerate Research: sponsorship; short method; sample limit; headline pointer; limits list (self-report, correlation). H3 'Why Throughput and Instability tend to move together': finding, caveat box, small batches with one sentence each for CD principles and Fowler, AI hypothesis (one sentence), Khomh in two sentences, three exceptions (Change Fail Rate construct; 2024 Medium vs High; 2024 AI estimates)."
+    - "The DORA framework: table; DORA definitions quoted; recovery under Throughput; history (2023, 2024 label); correlational model; levels (2024 shares); 2025 profiles as illustrations."
+    - "Common Pitfalls: DORA's seven, then maturity model, measuring individuals, AI output. Each entry is one to three sentences and cross-references the good-measure properties instead of restating them."
+    - "Further reading: 12 one-line items (10 external, plus internal [DORA Metrics] and [Facilitation Guide]), written as '- [Label][]: text'. Lee flagged as independent critique."
 
   caveat_boxes:
     count: 2
     locations:
-      - "The Accelerate research section, after the headline finding: 'DORA finding, weak independent corroboration.' Covers the organizational-performance link. Reads: 'The findings describe prediction and association, not cause.'"
-      - "Why Throughput and Instability tend to move together, after the opening: 'DORA finding, weak independent corroboration.' Covers the no-trade-off finding. States that independent studies are scarce and that the one study found is narrow."
-    wording_check: "'Use predicts or is associated with, not causes' replaced by 'describe prediction and association, not cause'. 'found no independent study' replaced by 'did not include an independent study that reproduces it' with 'The sources reviewed for this page' scoping."
+      - "Why measuring matters, organizational outcomes: 'DORA finding, weak independent corroboration.' Survey data; organizational performance self-rated (stated only here, once); no independent replication among sources reviewed; prediction and association, not cause."
+      - "The Accelerate Research, H3 Throughput and Instability: 'DORA finding, weak independent corroboration.' DORA survey data; independent studies scarce; the one found is narrow."
 
-  traceability:
+  glossary_compliance:
+    terms_used_verbatim: [Software Delivery Performance, Throughput, Instability, Change Lead Time, Deployment Frequency, Failed Deployment Recovery Time, Change Fail Rate, Deployment Rework Rate, Participants, Facilitation Guide, Learning Hour]
+    avoid_terms_check:
+      - "MTTR, mean time to restore, time to restore service: absent"
+      - "change failure rate (lowercase): absent"
+      - "stability as group name: absent. Quoted only: 'delivery stability' (DORA 2024 pp. 39-40) and 'software delivery stability' (DORA 2024 pp. 11-12, the old group label; Instability named next to it)"
+      - "speed: only inside DORA's quoted phrase ('measures the speed of making updates...')"
+      - "velocity: named only as the measure being critiqued ('Velocity was meant for capacity planning'; 'velocities incommensurable'). Orchestrator decision: allowed, because the glossary forbids velocity as a synonym for Throughput, not as the subject of critique. Not used as a synonym anywhere."
+      - "lead time / cycle time: 'lead times' now sits inside the book quote, verbatim: 'as utilization approaches 100%, lead times approach infinity' (chapter 2). 'cycle time' and 'lead time for changes' absent."
+      - "quality: absent"
+      - "release frequency, release cadence, hotfix, rework rate, attendee, student, learner: absent"
+    compliance_estimate: "100% of checked glossary terms; one low-risk generic usage."
+
+  link_check:
+    internal:
+      - "[DORA Metrics]: {% link explanation/dora-metrics.md %} (site/explanation/dora-metrics.md exists)"
+      - "[Facilitation Guide]: {% link how-to/facilitation-guide.md %} (site/how-to/facilitation-guide.md exists)"
+    external_labels_defined:
+      - "Accelerate -> https://itrevolution.com/product/accelerate/ (research S39)"
+      - "DORA's software delivery performance metrics -> https://dora.dev/guides/dora-metrics/"
+      - "DORA history -> https://dora.dev/guides/dora-metrics/history/ (research S2)"
+      - "DORA FAQ -> https://dora.dev/faq/"
+      - "DORA 2022 research -> https://dora.dev/research/2022/"
+      - "DORA 2024 report -> https://dora.dev/research/2024/dora-report/"
+      - "DORA 2025 report -> https://dora.dev/research/2025/dora-report/"
+      - "DORA 2025 sponsors -> https://dora.dev/research/2025/sponsors/ (research S33, web page)"
+      - "DORA measurement frameworks -> https://dora.dev/research/2025/measurement-frameworks/"
+      - "SPACE, ACM Queue -> https://doi.org/10.1145/3454122.3454124"
+      - "InfoQ report of SPACE -> https://www.infoq.com/news/2021/03/space-developer-productivity (research S38; paraphrase only)"
+      - "Fowler, Cannot Measure Productivity -> https://martinfowler.com/bliki/CannotMeasureProductivity.html"
+      - "Fowler, Frequency Reduces Difficulty -> https://martinfowler.com/bliki/FrequencyReducesDifficulty.html"
+      - "Kua, An Appropriate Use of Metrics -> https://martinfowler.com/articles/useOfMetrics.html (research S37; quotes verified by orchestrator fetch)"
+      - "Continuous Delivery principles -> https://continuousdelivery.com/principles/"
+      - "Khomh et al. 2012 -> https://swat.polymtl.ca/~foutsekh/docs/Khomh-MSR-2012.pdf (abstract only)"
+      - "Lee, review of Accelerate -> https://keunwoo.com/notes/accelerate-devops/ (off trusted list; labelled as independent critique)"
+      - "Finster, Misuse and Abuse of DORA Metrics -> https://reader.itrevolution.com/library/how-to-misuse-abuse-dora-metrics"
+      - "Thoughtworks Technology Radar -> https://www.thoughtworks.com/radar/techniques/dora-metrics"
+    integrity:
+      defined_labels: 21
+      undefined_references: 0
+      unused_definitions: 0
+      further_reading_items: 12 (10 external, 2 internal: DORA Metrics, Facilitation Guide)
+      note: "Checked by hand. Further reading uses '[Label][]' form; body uses shortcut references. External URLs not re-fetched in this step."
+
+  traceability_after_trim:
+    - section: Overview
+      findings: ["Executive Summary and source-bias caveat", "Finding 2.5 (research guides, does not prove cause)"]
+    - section: "Software Delivery is hard to measure"
+      findings: ["Finding 1.1 (Accelerate ch. 2; Fowler 2003 quote and time lag)", "Finding 1.2 (lines of code, velocity, utilization; Accelerate ch. 2; Gap 3 velocity book-only)", "Kua [S37] knowledge-work quote (verified)"]
     - section: "Why measuring matters"
-      findings_used:
-        - "Research Finding 1.1 (Accelerate ch. 2 'inventory is invisible'; Fowler 2003 quote and time lag)"
-        - "Research Finding 1.2 (lines of code, velocity, utilization quotes from Accelerate ch. 2)"
-        - "Research Finding 1.3 (global outcome, outcomes not output; wall of confusion)"
-    - section: "The Accelerate research"
-      findings_used:
-        - "Research Finding 2.1 (Puppet partnership 2014-2017; DORA is a Google Cloud program, FAQ; vendor sponsorship; 2025 vendor sponsors listed on dora.dev sponsors page, not named on the page; no acquisition date per Conflict 3)"
-        - "Research Finding 2.2 (method: latent constructs, clustering with 'doesn't know what counts as good or bad', regression; sampling and the 'miss a cohort' admission)"
-        - "Research Finding 2.3 ('twice as likely', self-rated organizational performance)"
-        - "Research Finding 2.3 / Source S14 (2022 reliability condition, now linked to [DORA 2022 research], https://dora.dev/research/2022/ , added in revision 1)"
-        - "Research Finding 2.5 (self-report 2024 p.13 'the software delivery performance of the primary application or service they work on'; 'causal analysis not included' ch. 12; 'longitudinal studies' 2024 p.110; 2025 measurement frameworks bias quote; Lee critique paraphrased; 2017 '200 times more frequently' and 2024 '182x more' p.15)"
-        - "Writer's brief items 6, 9"
-    - section: "Why Throughput and Instability tend to move together"
-      findings_used:
-        - "Research Finding 3.1 (Accelerate 'do better at all of these measures', 'precisely what the Agile and Lean movements predict'; 2024 p.10 'typically move together')"
-        - "Research Finding 3.3 (small batches, 'if it hurts, do it more often' Fowler 2011, continuous delivery principle; 2024 AI batch-size hypothesis p.40, not measured; 'raises this idea as a hypothesis' wording)"
-        - "Research Finding 3.1 verification (Khomh et al. MSR 2012 abstract-only; flagged in text)"
-        - "Research Finding 3.2/3.4 (2016 medium worse than low on Change Fail Rate; construct tests in ch. 3; 2024 Medium 10% vs High 20% and p.14 'highlights one of the potential pitfalls'; 2024 AI -1.5% Throughput and 7.2% 'delivery stability' pp.39-40; 2025 p.4 AI quotes)"
-        - "Writer's brief items 7, 8, 10 (caveat box added in revision 1)"
+      findings: ["Addendum A2.1 (DORA 2024 p. 7 feedback loops; DORA 2025 p. 22)", "Addendum A2.2 (DORA 2024 p. 7 experimental cycle)", "Addendum A2.3 (Accelerate ch. 2 global system-level outcomes quote; dora.dev sharing quote; Gap 12 noted as DORA-only)", "Addendum A2.4 (Accelerate ch. 2 twice-as-likely, self-rated; DORA 2022 reliability moderator; Gap 1 box)"]
+    - section: "What makes a good measure"
+      findings: ["Finding 1.3 (two traits; Accelerate ch. 2 'wall of confusion')", "Addendum A3.1 (DORA 2024 p. 74 quotes; InfoQ/SPACE paraphrased with attribution, no quotation marks)", "Addendum A3.2 (dora.dev tension quote; DORA 2025 p. 4 association; SPACE abstract quote; rated medium in prose)", "Addendum A3.3 (DORA 2025 p. 20 'continuous learning'; Kua 'people may find ways' quote; Finster reference)", "Addendum A3.4 (dora.dev 'both leading and lagging'; DORA 2025 p. 14 'ultimately outcomes'; DORA model not independent)", "Addendum A3.5 (DORA 2025 p. 20 'best, most insightful comparisons'; Accelerate ch. 2 'incommensurable'; benchmarks as context per Conflict 8)", "Addendum A3.6 (Accelerate ch. 2 deployment frequency as proxy, limited to that measure; dora.dev integrations quote)"]
+    - section: "The Accelerate Research"
+      findings: ["Findings 2.1 (sponsorship; FAQ; no acquisition date)", "Finding 2.2 (method; latent constructs; clustering quote; regression; sample; 'miss a cohort' quote, Accelerate ch. 15)", "Finding 2.5 (DORA 2025 measurement frameworks bias quote; Accelerate ch. 12 'not included'; DORA 2024 p. 110; Lee critique)", "H3: Findings 3.1 (Accelerate 'do better at all of these measures'; DORA 2024 p. 10), 3.3 (small batches; CD principles; Fowler 2011; 2024 p. 40 hypothesis, unmeasured), 3.1 Khomh (abstract only), 3.4 items 1, 4 and 6 (Accelerate ch. 3 construct; 2024 p. 14 Medium vs High; 2024 pp. 39-40 AI estimates; 2025 p. 4 quote now used in the tension property only)"]
+      removed_for_length: "Benchmark multipliers (2017 '200 times', 2024 '182x') removed. Accelerate ch. 2 2016 medium-vs-low exception removed. Method step list condensed to one paragraph."
     - section: "The DORA framework"
-      findings_used:
-        - "Research Finding 4.1 (verbatim Throughput and Instability definitions, DORA dora.dev)"
-        - "Research Finding 4.2 (2023 Failed Deployment Recovery Time change; 2024 Deployment Rework Rate added; 2024 pp.11-12 'software delivery stability' factor label, cited to [DORA 2024 report] pp. 11-12)"
-        - "Research Finding 2.4 / 4.4 (DORA model; 'both leading and lagging indicators'; correlational caveat)"
-        - "Research Finding 4.3 (emergent clusters, 'emerge from the survey responses' p.13; 2024 shares 19/22/35/25 p.13; 'elite improvement' p.14; 2025 seven profiles pp.16-18; 'interpretation of the data' p.16; 'tell you what is happening' p.14)"
-        - "Research Finding 3.2 row 2024 p.12 (Throughput 'measures the speed of making updates...')"
-    - section: "Common pitfalls"
-      findings_used:
-        - "Research Finding 5.1 (setting metrics as a goal; Accelerate 2018 targets advice treated as past, Conflict 6; Deming 'whenever there is fear, you get the wrong numbers' in Accelerate ch. 2; Finster 2022 'misapplied as standalone improvement targets')"
-        - "Research Finding 5.2 (disparate comparisons; 'incommensurable'; 'improve your team's performance over time' DORA)"
-        - "Research Finding 5.5 (one metric to rule them all)"
-        - "Research Finding 5.7 (industry as a shield; siloed ownership)"
-        - "Research Finding 5.2 (competing)"
-        - "Research Finding 5.6 (measurement over improvement; Thoughtworks 2022 pipeline-only data; Medium)"
-        - "Research Finding 5.4 (maturity models, Accelerate ch. 1 quote; labelled as book-and-practitioner pitfall, not DORA list)"
-        - "Research Finding 5.3 (measuring individuals; SPACE single metric quote; labelled as not on DORA list; Medium-High)"
-        - "Research Finding 5.8 (AI-generated lines of code; Thoughtworks Radar 2026; Medium; labelled as recent practitioner view)"
-    - section: "Reading the evidence"
-      findings_used:
-        - "Executive Summary source-bias caveat; Writer's brief 'Flag sponsorship once, factually'"
+      findings: ["Finding 4.1 (verbatim Throughput and Instability definitions)", "Finding 4.2 (2023 Failed Deployment Recovery Time; 2024 Deployment Rework Rate; 2024 pp. 11-12 label)", "Finding 3.2 row 2024 p. 12 (Throughput 'measures the speed of making updates...')", "Finding 4.4 (model; correlational)", "Finding 4.3 (2024 shares p. 13; 'emerge from the survey responses' p. 13; 'elite improvement' p. 14; 2025 profiles pp. 14-16; 'interpretation of the data' p. 16)"]
+    - section: "Common Pitfalls"
+      findings: ["Finding 5.1 (targets; 2018 advice treated as past, Conflict 6; Deming fear quote; Finster 'misapplied as standalone improvement targets')", "Finding 5.5 (one metric; cross-ref to tension)", "Finding 5.7 (industry shield; siloed ownership)", "Finding 5.2 (competing; DORA aim quote; disparate comparisons cross-ref)", "Finding 5.6 (measurement over improvement; Thoughtworks 2022 pipeline data; Medium)", "Finding 5.4 (maturity model, Accelerate ch. 1)", "Finding 5.3 (measuring individuals; cross-ref to team-or-system)", "Finding 5.8 (AI-generated lines; Thoughtworks Radar 2026; Medium; labelled practitioner view)"]
+    - section: "Further reading"
+      findings: ["Addendum A4 rows 1-10, one-line reasons each; Lee labelled as independent critique; SPACE via DOI, abstract-level claim only; Accelerate via publisher page used as a stable link only"]
+
+  collapse_detection:
+    clean: true
+    checks:
+      tutorial_creep: "None."
+      how_to_creep: "None. The method is described in prose, not as steps. Interpretive phrases ('Read the levels as a guide', 'Treat them as illustrations') are not procedures."
+      reference_dump: "None. One grouping table; definitions quoted in two sentences."
+      explanation_task_drift: "None detected."
+      hybrid_horror: "None."
+      duplication_check: "Removed in this pass: (a) 'counts output rather than outcomes' sentence after the three naive measures (outcomes-vs-output kept in What makes a good measure); (b) 'A single number hides trade-offs' kept only in the tension property, pitfall now cross-references; (c) 'self-rated' kept once (organizational-outcome caveat box); (d) 'Like the metrics, the model is correlational' removed from the framework section; (e) 'a team should pair them with capabilities' advice removed from the leading/lagging property; (f) 'Measuring individuals' pitfall reduced to a cross-reference; (g) 'Making disparate comparisons', 'Having siloed ownership' and 'Focusing on measurement' pitfalls reduced to cross-references (Thoughtworks 2022 kept once, in the measurement pitfall); (h) 'DORA warns against accepting that claim' replaced with DORA's verbatim 'might claim that compliance requirements'; (i) the AI p.40 batch-size point stated once in the H3 (the AI 1.5%/7.2% estimates stated once in exceptions, with the 2025 AI quote in the tension property). Kept: the 2024 p.110 quote in limits; the correlational caveat in Overview and both boxes."
+      verbatim_fixes: "'lead times approach infinity' now verbatim; 'might claim that compliance requirements' now verbatim from DORA; InfoQ/De Simone summary is attributed and has no quotation marks; 2025 AI association attributed as 'an association reported by DORA'."
+      readability_fixes: "Long sentences split at the AI estimate (1.5% Throughput; 7.2% 'delivery stability'); 'Standard questions measure ideas that cannot be observed directly'; maturity-model assumption reworded to 'each maturity level looks the same'; lead sentence changed to 'Poorly chosen measures can encourage gaming and local optimization.'"
 
   open_caveats:
-    - "Flesch 54.2 and 2,316 words (measured). Flesch gate 70-80 not achievable for this page; deviation needs user acceptance."
-    - "Organizational-performance link and the no-trade-off finding are presented as DORA findings with weak independent corroboration, each with a visible caveat box."
-    - "The 2018 'set targets' line is described as past advice and not quoted as current advice."
-    - "The 2022 'Slowing' group and cluster shares from the Google Cloud blog (research Gap 9) are not used. The 2022 reliability condition is taken from the DORA 2022 research page."
-    - "Khomh et al. 2012 is cited from the abstract only; the page says so."
-    - "Thoughtworks Radar points (Medium confidence in research) are paraphrased, not quoted, and dated (2022, 2026)."
-    - "Lee's review is not on the trusted-source list; used once as a critic, paraphrased, with a link."
-    - "The 2025 seven profiles are named only in two examples with shares; the full list is not given (illustration only)."
-    - "The 2025 vendor sponsors are noted as existing; no sponsor names appear on the page."
-    - "Plain-text citations (Accelerate chapters, SPACE) have no link because no approved stable URL exists in the research."
-    - "External URLs were not re-fetched in this run; they come from the approved research citation list."
-    - "dora-metrics.md was not edited (out of scope). The overlap between that page's pitfalls and this page's pitfalls section is left to the user."
-    - "Lead paragraph and TOC block follow the project layout; front matter is unchanged."
+    - "Measured after review 1: 2,472 words, Flesch 49.7. Flesch 70-80 gate not met; deviation awaits user acceptance."
+    - "Caveat box placement: one in Why measuring matters, one in the H3. Matches the coordinator's trim instruction."
+    - "The 2016 Accelerate exception and the 2017/2024 benchmark multipliers were removed to save length. Neither is needed for any remaining claim."
+    - "Khomh is abstract-only (stated on page). Lee is off the trusted list (labelled). SPACE is abstract-only (stated by the property wording). InfoQ paraphrase has no quotation marks."
+    - "Velocity claims rest on the book alone (Gap 3)."
+    - "Pitfall cross-references are now phrased as 'The tension property shows...', 'The comparable-over-time property offers the alternative...' and similar."
+
+  previous_versions:
+    - version: "cycle 1 revision"
+      summary: "Long sentences split; two caveat boxes; pitfalls intro corrected to seven DORA pitfalls with the last three labelled book and practitioner; 2022 link; 182x p. 15; 2025 sponsors link; Thoughtworks blip years; programme to program."
+      reviews: "Orchestrator: NEEDS_REVISION (Flesch 55.3, 2,412 words)."
+    - version: "cycle 2 (measured)"
+      summary: "Sentence length reduced; 2,430 words; Flesch 55.6."
+      reviews: "Orchestrator: remaining drag is syllables per word; cut to 2,200 words."
+    - version: "cycle 3"
+      summary: "Trimmed reading-evidence close, benchmark and AI bullets, framework history and levels; repeated caveat wording removed."
+      reviews: "Superseded by restructure."
+    - version: "restructure (2026-10-18)"
+      summary: "H2 sections reorganized as the user specified; added Software Delivery is hard to measure, Why measuring matters (A2), What makes a good measure (A3), Further reading (A4). Accelerate section holds the H3 Throughput and Instability."
+      reviews: "Addendum Review 1 NEEDS_REVISION (11 issues), resolved in addendum revision 1; Addendum Review 2 APPROVED (research)."
+    - version: "restructure trim (3,477 words measured, Flesch 53.3)"
+      summary: "Current version. Accelerate section, good-measure properties, pitfalls, further reading and framework trimmed as described above."
+      reviews: "Trimmed version measured: 2,546 words, Flesch 51.1."
 
 documentation_assessment_review_2:
+  review_id: "doc_rev2_20261018_measuring_sdp_explanation"
   reviewer: "nw-documentarist-reviewer (Quill)"
-  review_cycle: 2
-  max_cycles: 2
-  verdict: NEEDS_REVISION
-  approval_status: escalate_to_human
-  flesch_gate: {target: "70-80", achievable: false, measured: 54.2, recommendation: "Accept deviation"}
-  issues_not_resolved_at_review: [7, 18]
-  new_issues: [N1, N2, N3, N4, N5]
+  cycle: 2
+  verdict: APPROVED
+  issue_summary: {blocking: 0, high: 0, medium: 0, low: 4}
   orchestrator_fixes_after_review:
-    - "7: 182x comparator added (elite versus low, 2024 p. 15)"
-    - "18: uncited 'recalculated each year' removed from method list; cited claim stays in levels paragraph (2024 p. 13)"
-    - "N1, N2, N5: validation figures and label counts corrected"
-    - "N3: 'The one independent study found is'"
-    - "N4: 'the link depends on operational reliability'"
-  deferred_to_user: ["Flesch deviation acceptance", "Overlap with site/explanation/dora-metrics.md pitfalls list"]
+    - "L1: batch-size sentence now quotes Accelerate ch. 2 verbatim ('accelerates feedback', 'reduces risk')"
+    - "L2: Thoughtworks 2026 claim hedged as practitioner view taken from a summary"
+    - "L3: stale measurement lines updated"
+  deferred_to_user: ["Flesch 70-80 deviation (measured 49.7)", "Overlap with site/explanation/dora-metrics.md pitfalls list"]
