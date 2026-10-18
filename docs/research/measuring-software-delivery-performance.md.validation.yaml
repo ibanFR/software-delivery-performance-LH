@@ -156,3 +156,17 @@ documentation_assessment_review_2:
     - "L2: Thoughtworks 2026 claim hedged as practitioner view taken from a summary"
     - "L3: stale measurement lines updated"
   deferred_to_user: ["Flesch 70-80 deviation (measured 49.7)", "Overlap with site/explanation/dora-metrics.md pitfalls list"]
+
+documentation_assessment_review_3:
+  review_id: "doc_rev3_20261018_measuring_sdp_explanation"
+  reviewer: "nw-documentarist-reviewer"
+  change: "H3 'Why Throughput and Instability tend to move together' promoted to H2 'Throughput and Instability move together', placed after The DORA framework. No new claims; research unchanged."
+  cycles:
+    - {cycle: 1, verdict: NEEDS_REVISION, issue_summary: {blocking: 0, high: 0, medium: 3, low: 2}}
+    - {cycle: 2, verdict: APPROVED, issue_summary: {blocking: 0, high: 0, medium: 0, low: 1}}
+  orchestrator_fixes_after_review:
+    - "Overview glosses Throughput and Instability before first use"
+    - "AI-era forward reference now points to the exceptions below"
+    - "Removed wrong cheap-to-collect cross-reference in pitfalls"
+    - "Learning property referenced by its exact heading"
+  deferred_to_user: ["Heading unhedged; research prefers 'tend to' (user-specified title kept)"]

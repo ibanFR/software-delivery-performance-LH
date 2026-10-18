@@ -21,7 +21,7 @@ Software Delivery Performance is hard to measure. Poorly chosen measures can enc
 
 This page explains why DORA measures Software Delivery Performance the way it does. It covers the research behind that choice, the framework it produced, and the common ways measurement goes wrong. It is written for Participants who may know little about DORA. It gives no steps to follow.
 
-DORA reports two main findings. The best teams tend to do well on both Throughput and Instability. And Software Delivery Performance is associated with organizational performance. Both findings come mostly from DORA's own surveys, with few independent checks. Treat them as well-supported patterns, not as proof.
+DORA reports two main findings. The best teams tend to do well on both Throughput, how many changes move through the system, and Instability, how well deployments go. Both are defined under The DORA framework. And Software Delivery Performance is associated with organizational performance. Both findings come mostly from DORA's own surveys, with few independent checks. Treat them as well-supported patterns, not as proof.
 
 The research can guide what a team looks at. It does not prove that a practice will cause a result in your team.
 
@@ -82,24 +82,6 @@ The headline result is described in Why measuring matters, with its caveat. Two 
 - **The data is self-reported.** Respondents describe their own teams. DORA's 2025 guidance says self-reported data "may be more susceptible to biases (including recall bias and social desirability bias)" ([DORA measurement frameworks]).
 - **The findings are correlational.** The book says causal analysis "was not included in our research." In 2024, DORA wrote that "we didn't do longitudinal studies or a proper experiment" ([DORA 2024 report], p. 110). The critic Keunwoo Lee makes this point too ([Lee, review of Accelerate]).
 
-### Why Throughput and Instability tend to move together
-
-The book's most surprising finding is that the best teams do well on both groups. High performers "do better at all of these measures," which the authors call "precisely what the Agile and Lean movements predict" (*Accelerate*, chapter 2). DORA's 2024 report says these metrics "typically move together" (p. 10).
-
-> **DORA finding, weak independent corroboration.** This pattern comes from DORA's own survey data. Independent studies are scarce, and the one found is narrow (see below).
-
-The book offers small batches as a mechanism. Reducing batch size "accelerates feedback" and "reduces risk" (chapter 2). The continuous delivery principles also say to work in small batches ([Continuous Delivery principles]). Fowler's 2011 phrase is "if it hurts, do it more often" ([Fowler, Frequency Reduces Difficulty]). No controlled study isolates batch size. DORA's 2024 report only hypothesizes that batch size is involved in the AI-era pattern (p. 40).
-
-Independent evidence is thin. Khomh and colleagues' 2012 study of Firefox's shorter release cycles found, in its abstract, no significant rise in post-release bugs and faster bug fixes ([Khomh et al. 2012]). Only the abstract was read. The study covers one product and release timing, not the DORA metrics.
-
-The pattern is an average, not a rule. Three exceptions show this.
-
-- Change Fail Rate did not pass the statistical tests needed to form one construct with the other metrics (*Accelerate*, chapter 3). DORA's 2024 report keeps Throughput and Instability as related factors.
-- In 2024, medium performers had a lower Change Fail Rate (10%) than high performers (20%). DORA said that ranking them was a decision that "highlights one of the potential pitfalls of using these performance levels" (p. 14).
-- In 2024, DORA estimated that each 25% rise in AI adoption came with about a 1.5% fall in Throughput (pp. 39-40). It also estimated a 7.2% fall in "delivery stability," which means higher Instability. These are associations with wide uncertainty.
-
-On average, the best teams are fast, and their deployments go wrong less often. Treat this as a tendency, not a law for every team.
-
 ## The DORA framework
 
 DORA's framework has five metrics in two groups. Each definition is on the [DORA Metrics] page.
@@ -109,7 +91,7 @@ DORA's framework has five metrics in two groups. Each definition is on the [DORA
 | Throughput | Change Lead Time, Deployment Frequency, Failed Deployment Recovery Time |
 | Instability | Change Fail Rate, Deployment Rework Rate |
 
-DORA defines the groups this way. "Throughput is a measure of how many changes can move through the system over a period of time." "Instability is a measure of how well the software deployments go" ([DORA's software delivery performance metrics]). The two groups are related but statistically distinct.
+DORA defines the groups this way. "Throughput is a measure of how many changes can move through the system over a period of time." "Instability is a measure of how well the software deployments go" ([DORA's software delivery performance metrics]). The two groups are related but statistically distinct. How they relate is covered under Throughput and Instability move together.
 
 Failed Deployment Recovery Time sits under Throughput, which can surprise readers. DORA's 2024 report explains that Throughput "measures the speed of making updates of any kind, normal changes and changes in response to a failure" (p. 12). A recovery is itself a change.
 
@@ -121,11 +103,29 @@ DORA also groups teams into Elite, High, Medium and Low levels. In 2024, the sha
 
 In 2025, DORA replaced the ranked levels with seven team profiles. Two examples are "Foundational challenges," which described 10% of respondents, and "Harmonious high-achiever," which described 20%. DORA says these names "are an interpretation of the data" (2025 report, p. 16). Treat them as illustrations, not labels for a team. The reason for the change is that the five metrics "tell you what is happening, but they don't explain why" (p. 14).
 
+## Throughput and Instability move together
+
+The book's most surprising finding is that the best teams do well on both groups. High performers "do better at all of these measures," which the authors call "precisely what the Agile and Lean movements predict" (*Accelerate*, chapter 2). DORA's 2024 report says these metrics "typically move together" (p. 10).
+
+> **DORA finding, weak independent corroboration.** This pattern comes from DORA's own survey data. Independent studies are scarce, and the one found is narrow (see below).
+
+The book offers small batches as a mechanism. Reducing batch size "accelerates feedback" and "reduces risk" (chapter 2). The continuous delivery principles also say to work in small batches ([Continuous Delivery principles]). Fowler's 2011 phrase is "if it hurts, do it more often" ([Fowler, Frequency Reduces Difficulty]). No controlled study isolates batch size. DORA's 2024 report only hypothesizes that batch size is involved in the AI adoption pattern described in the exceptions below (p. 40).
+
+Independent evidence is thin. Khomh and colleagues' 2012 study of Firefox's shorter release cycles found, in its abstract, no significant rise in post-release bugs and faster bug fixes ([Khomh et al. 2012]). Only the abstract was read. The study covers one product and release timing, not the DORA metrics.
+
+The pattern is an average, not a rule. Three exceptions show this.
+
+- Change Fail Rate did not pass the statistical tests needed to form one construct with the other metrics (*Accelerate*, chapter 3). DORA's 2024 report keeps Throughput and Instability as related factors.
+- In 2024, medium performers had a lower Change Fail Rate (10%) than high performers (20%). DORA said that ranking them was a decision that "highlights one of the potential pitfalls of using these performance levels" (p. 14).
+- In 2024, DORA estimated that each 25% rise in AI adoption came with about a 1.5% fall in Throughput (pp. 39-40). It also estimated a 7.2% fall in "delivery stability," which means higher Instability. These are associations with wide uncertainty.
+
+On average, the best teams are fast, and their deployments go wrong less often. Treat this as a tendency, not a law for every team.
+
 ## Common Pitfalls
 
 DORA lists seven common pitfalls. The first seven below follow that list. The last three come from the book and from practitioners. Where a point is covered in full under What makes a good measure, this section refers back to it.
 
-**Setting metrics as a goal.** The book's 2018 advice was to ask teams to set targets for these measures. DORA now lists target-setting as its first pitfall. The book also warns that in pathological cultures, measurement becomes control. Quoting Deming, it says "whenever there is fear, you get the wrong numbers" (*Accelerate*, chapter 2). Finster warns that the metrics are often "misapplied as standalone improvement targets" ([Finster, Misuse and Abuse of DORA Metrics]). For the learning-first alternative, see the property on learning over targets.
+**Setting metrics as a goal.** The book's 2018 advice was to ask teams to set targets for these measures. DORA now lists target-setting as its first pitfall. The book also warns that in pathological cultures, measurement becomes control. Quoting Deming, it says "whenever there is fear, you get the wrong numbers" (*Accelerate*, chapter 2). Finster warns that the metrics are often "misapplied as standalone improvement targets" ([Finster, Misuse and Abuse of DORA Metrics]). For the learning-first alternative, see Used for learning, not as a target under What makes a good measure.
 
 **Having one metric to rule them all.** A team can look good on Throughput while Instability rises. See the tension property under What makes a good measure.
 
@@ -137,7 +137,7 @@ DORA lists seven common pitfalls. The first seven below follow that list. The la
 
 **Competing.** Ranking teams against each other encourages gaming and hides shared problems. DORA's aim is "to improve your team's performance over time, not to compete against other teams or organizations" ([DORA's software delivery performance metrics]).
 
-**Focusing on measurement at the expense of improvement.** Teams can spend weeks on dashboards before they change anything. The data may already exist, and a conversation can be a better start. In 2022, Thoughtworks warned that pipeline-only data misses real incidents that affect users ([Thoughtworks Technology Radar]). The cheap-to-collect property covers this further.
+**Focusing on measurement at the expense of improvement.** Teams can spend weeks on dashboards before they change anything. The data may already exist, and a conversation can be a better start. In 2022, Thoughtworks warned that pipeline-only data misses real incidents that affect users ([Thoughtworks Technology Radar]).
 
 **Treating levels as a maturity model.** The book says "maturity models are not the appropriate tool to use or mindset to have" (*Accelerate*, chapter 1). They assume that each maturity level looks the same in every team, and they can turn a snapshot into a permanent label.
 
